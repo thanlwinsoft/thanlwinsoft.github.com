@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Introduction</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../_shared/thanlwin.css"/>
+<link href="../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="Myanmar Unicode Howto" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../_shared/';myUnicode.initParse('../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../"><img class="fleft" src="../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../" title="ThanLwinSoft">Home</a></li>
+<li class="currentDir"><a href="../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="currentDoc"><span>Intro</span></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+</ul></li><li class="contentsDir"><a href="../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>A Guide to Using Myanmar Unicode</h1>
+<h2>Introduction</h2>
+<div>
+<h3>Overview of Technical Issues</h3>
+<p>
+Most existing Myanmar fonts use the <a href="http://www.microsoft.com/globaldev/reference/sbcs/1252.mspx">Windows 1252</a> Code Page encoding, but substitute Myanmar glyphs<a class="note" title="A glyph represents the visible lines making up a character on the page">*</a> in place of the English (Latin) glyphs. Unfortunately there is no standard for which Myanmar glyphs go with a particular Latin character, so many fonts are incompatible with each other. Some Myanmar consonants, semi-vowels and vowels can have different shapes according to context and so each of these is represented as a different character in the font. This means that a normal computer keyboard is unable to type several of these characters with the normal key and key + Shift combinations. Instead the user must type the character code by hand or use Ctrl and Alt keys<a class="note" title="Specific applications may use other methods">*</a>. The former is difficult to remember and the latter is problematic because it prevents keyboard shortcuts being used for menus etc.
+</p>
+<p>
+The Unicode Code Points for Myanmar are defined in <a href="http://www.unicode.org/">Unicode</a> 5.1 in the code space from <a href="http://www.unicode.org/charts/PDF/U1000.pdf">U+1000 to U+109F</a>. Unicode always uses the same code point for the same character or semi-vowel, even if it changes shape depending on the context. Invisible codes such as virama are used to specify the characters in their different forms. This means that complex rendering software is needed to choose the right glyph. There is no longer a 1-to-1 relationship between code point and glyph. 
+</p>
+
+<p>
+Another consequence of using Unicode is that the order you type and the order you store Myanmar characters in your file are different. This means you need a smart keyboard technology (an Input Method) to convert what you type into the correct sequence of Unicode characters.
+The difference between the typing order, the storage order and the order that glyphs are displayed on screen is summarized in the figure below for the Myanmar word for a cat.
+</p>
+<p class="centre">
+<img src="myUnicodeGraphiteReordering.png" />
+</p>
+<h4>Changes to the way Myanmar Unicode is encoded</h4>
+<p>A careful analysis of the Unicode 4 standard will reveal that there are some ambiguities, especially involving the handling of Kinzi <span class="my">င်္◌</span>. There were a number of suggestions for how to resolve these ambiguities without any additions to the standard. (For example, Unicode Technical Note 11 <a href="http://www.unicode.org/notes/tn11/">Representing Myanmar in Unicode</a>). However, it was agreed to modify the standard by adding additional characters for Yapin, Yayit, Wasway, Hatoo <span class="my">◌ြ ◌ျ ◌ွ ◌ှ</span> (U+103C - U+103E). These changes were accepted in Unicode 5.1. (The associated <a href="http://ra.dkuug.dk/jtc1/sc2/wg2/">proposals</a> were: <a href="http://ra.dkuug.dk/jtc1/sc2/wg2/docs/n3043.pdf">N3043</a>, <a href="http://ra.dkuug.dk/jtc1/sc2/wg2/docs/n3044.pdf">N3044</a>, <a href="http://ra.dkuug.dk/jtc1/sc2/wg2/docs/n3142.pdf">N3142</a>, <a href="http://ra.dkuug.dk/jtc1/sc2/wg2/docs/n3143.pdf">N3143</a>.)</p>
+<p>The Unicode 4 Standard suggested using a Zero Width Non-Joiner Character U+200C to distinguish between a visible killer <span class="my">◌်</span> and the virama character U+1039 used to prefix a consonant when it is rendered underneath the line. e.g. <span class="my">◌္က</span>. However, this caused lots of problems because ZWNJ is ususally used only in Right to Left languages and is often stripped out by software like javascript. A separate character U+103A has now been added to represent the visible killer <span class="my">◌်</span>. Thagyi <span class="my">ဿ</span> now also now has its own code point U+103F because <span class="my">သ္သ</span> is found in some ancient Bamar texts.
+</p>
+</div>
+<p class='right'><a href='../MyanmarUnicode/Fonts/'>Fonts&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

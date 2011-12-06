@@ -1,0 +1,212 @@
+/*
+Copyright 2005 ThanLwinSoft.org
+
+You are free to use this on your website and modify it 
+subject to a Creative Commons license. 
+However, please add a link to www.thanlwinsoft.org 
+on every page that uses this script. For more info
+and contact details see www.thanlwinsoft.org.
+
+This copyright statement must not be removed.
+---------------------------------------------------------
+
+The keyboard will not be displayed until you click on a 
+link which calls java script code similar to:
+
+<a href="javascript:toggleKeyboard()">
+ခလုတ်ကွက်ပြ
+</a>
+
+These links can be added automatically if you add the following onload tag:
+<body onload="myK.registerKeyboard('my');">
+
+You will also need to add a link to the accompanying script
+in your page header. The page uses the UTF-8 Unicode Encoding.
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<script type="text/javascript" src="xmlRequest.js"></script>
+<script type="text/javascript" src="myKeyboard.js"></script>
+</head>
+*/
+table.consonants, table.vowels {
+
+  padding: .2em;
+  background-color:#aaaaaa;/* button */
+  border-collapse: collapse;
+  border-spacing: 0.4em;
+}
+
+col.consonants {
+  width: 2em;
+}
+col.vowels {
+  width: 2em;
+}
+col.consWide {
+  width: 2.5em;
+}
+col.wideCol {
+  width: 3em;
+}
+
+td.keyboard {
+  text-align: center;
+  padding: 0.1em; 
+  border-width: .1em; 
+  border-color: #ffffff; /*background*/
+  border-style: solid;
+  font-size: 1.2em;
+  height: 1.5em;
+}
+
+td.keyButton {
+  text-align: right;
+  padding: 0.1em; 
+  border-width: .1em; 
+  background-color: #aaaaaa;/* button */
+  border-color: #ffffff;/* background */
+  border-style: solid;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 1.5em;
+}
+
+div.keyboard {
+  position: absolute; /* uncomment to place at fixed position at top of page*/
+  overflow: hidden;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid; 
+  border-color: black;
+  background-color: #ffffff; /* background */
+  margin: 0px;
+  z-index: 10;
+  min-width: 400px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  opacity: 0.5;
+}
+
+.thanlwinsoft {
+    display: block;
+    text-align: right;
+    font-size: small;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+	margin: 0px;
+    padding: 0px;
+}
+
+.keyboardTopBar {
+	text-align: left;
+	background-color: #0000ff;
+	color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+	margin-top: 0px;
+	margin: 0px;
+    padding: 0px;
+	line-height: 1em;
+    cursor: move;
+}
+
+
+.keyboardTopBar p {
+	margin: 0px;
+    padding: 0px;
+	text-align: right;
+	vertical-align: top;
+	font-size: small;
+}
+
+.keyboardTopBar span {
+}
+
+.keyboardTopBar a:link,  .keyboardTopBar a:visited, .keyboardTopBar a:active{
+    color: black;
+	text-decoration: none;
+	border-style: none;
+}
+
+a.closeWindow , a.closeWindow:link, a.closeWindow:visited, a.closeWindow:active{
+    color: white;
+	font-family: Arial;
+	font-weight: bold;
+	margin-left: 0.5em;
+	vertical-align: top;
+	font-size: small;
+}
+.keyboardTopBar img {
+  border-style: none;
+}
+
+.my, a.keyboard:link, a.keyboard:visited, a.keyboard:active, div.keyboard p.keyboardTab {
+  text-decoration: none;
+  font-family: PadaukOT, Padauk, Myanmar3, Parabaik, 'MyMyanmar Unicode';
+  font-weight: bold;
+}
+
+input, textarea {
+  font-family: PadaukOT, Padauk, Myanmar3, Parabaik, 'MyMyanmar Unicode';
+}
+
+/** for Unicode support detection*/
+.myUniTest {
+        font-family: PadaukOT, Padauk, Myanmar3, Parabaik, 'MyMyanmar Unicode';
+        font-size: 1em; /* don't make it so small that rounding errors give problems */
+        color: white; /* should be same as background to make it invisible */
+}
+	
+.arrow {
+  font-family: arial;
+}
+
+/* Keyboard layout styles */
+table.keyboard { width: auto; padding: 1px; margin: 0px; border-width: 0px; font-size: 12px; }
+table.keyboard tr { padding: 0px; margin: 0px; }
+table.keyboard td { background-color: #707070; width: 2em; height: 2em; padding: 0em; 
+	border-style: solid; border-width: 0.1em; 
+	border-top-color: #808080; border-left-color: #808080; 
+	border-bottom-color: #606060; border-right-color: #606060; cursor: pointer;
+	}
+table.keyboard td.special { background-color: #505050; text-align: center; 
+    font-weight: bold; cursor: default; }
+table.keyboard span.en { font-family: sans-serif; }
+table.keyboard span.my { 
+    font-family: PadaukOT, Padauk, Myanmar3, Parabaik, 'MyMyanmar Unicode';
+    font-weight: bold; float: right; color: #f0f0ff; 
+}
+
+div.keyboard p.keyboardTab { 
+    margin: 2px; 
+    border-width: 1px; border-style: solid; border-color: white; 
+    line-height: 1.4em; 
+    cursor: pointer;
+}
+p.keyboardTab span { padding-left: 2px; padding-right: 2px; }
+
+div.myKeyInput { 
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;    
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+svg, canvas {
+    display: inline;
+    vertical-align: middle !important;
+    overflow: visible;
+}
+
+#myDebug, #tlsDebug {
+    margin: 10px;
+    font-family: sans-serif;
+    background: #ccc;
+    /*overflow: scroll;
+    max-height: 200px;*/
+}
+

@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head><title>ThanLwinSoft.org:  OSS - for Myanmar and beyond</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<link href="ThanLwinSoft/_icons/shortcut.png" rel="shortcut icon"/>
+<style type="text/css">
+body {
+	background: #fffff0;
+}
+/* setting margin on the real body causes problems for keyboardMover in ie*/
+div.body {
+  margin-left: 210px;
+  margin-top: 10px;
+  margin-right: 100px;
+  /*color: #00ff50;
+  background: #c07000;*/
+  color: #000000;
+  background: #fffff0;
+  counter-reset: note;
+  font-size: 12pt;
+}
+
+div.contentsBar {
+  position: static;
+  left: 10px;
+  top: 10px;
+  width: 180px;
+  margin: 0px;
+  padding: 0px;
+  border-color: #c07000;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: dotted;
+  border-right-style: dotted;
+  background: #ffffd0;
+}
+
+
+div.footer {
+  border-top-color: #c07000;
+  border-top-width: 0.1em;
+  border-top-style: solid;
+  font-size: 0.75em;
+  padding-top: .2em;
+}
+
+ul ul ul.contents {
+  list-style: disc;
+  color: #c07000;
+  /*background: #800010;*/
+  margin-right: 0px;
+  padding: 0px;
+  padding-left: 1em;
+}
+
+ul ul.contents {
+  list-style: square;
+  color: #c07000;
+  /*background: #800020;*/
+  margin-right: 0px;
+  padding: 0px;
+  padding-left: 1em;
+}
+
+div.contentsBar li {
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+  font-size: 11pt;
+}
+
+li {
+  margin-left: 0px;
+  margin-right: 0px;
+  border-width: 0px;
+  border-style: none;
+}
+
+li.currentDoc span, li.currentDir a {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+li.currentDoc {
+  /*border-right: 3px;
+  border-right-style: dotted;
+  border-right-color: #c07000;*/
+  background: #ffffb0;
+  font-style: italic;
+}
+li.currentDir {
+  /*border-right: 3px;
+  border-right-style: dotted;
+  border-right-color: #c07000;*/
+  background:#ffffb0;
+}
+ul.contents {
+  list-style: none;
+  list-style-position: outside;
+  padding: 0px;
+  padding-left: 1em;
+  background: #ffffd0;
+  text-indent: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+h1 { margin-left: 80px; font-size: 30px; }
+h1, h1 span, h1 span.my {
+  padding-top: 0px;
+}
+h2 {
+  font-size: 14pt;
+}
+h3 {
+  font-size: 13pt;
+}
+h4 {
+  font-size: 12pt;
+}
+h5 {
+  font-size: 12pt;
+}
+
+h1,h2,h3,h4,h5 {
+  /*color: navy;
+  background: silver; 
+  padding: 0.2em;*/ 
+  border-top-width: 0.1em;
+  border-bottom-width: 0.1em;
+  border-top-style: none;
+  border-bottom-style: solid;
+  color:  #c07000;
+  font-family: Tahoma, sans-serif;
+}
+
+a:link {
+    color: #e07000;
+}
+a:visited {
+    color: #a07000;
+}
+
+/*a.note:after {
+  content: "*hi" . counter(note);
+  counter-increment: note;
+}*/
+
+a.note {
+  vertical-align: super;
+  font-size: 0.8em;
+  color: #00ff00;
+}
+
+p.centre {
+  text-align: center;
+}
+
+p.right {
+  text-align: right;
+}
+
+.my {
+  font-size: 1em;
+  font-family: Padauk, Myanmar3, Myanmar2;
+}
+
+.fleft {
+  float: left;
+  padding: 0px;
+}
+
+.myUniTest {
+        font-family: Padauk, Myanmar3, Myanmar2;
+        font-size: 1em; /* don't make it so small that rounding errors give problems */
+        color: #c07000; /* should be same as background to make it invisible */
+    }
+.myWarning {
+    color: #ff0000;
+    border-color: #ff0000;
+    border-style: dotted;
+    border-width: 2px;
+}
+.myText {
+    font-family: Padauk, Myanmar3, Myanmar2;
+    font-size: 1em;
+}
+.myTextMsg {
+    text-align: center;
+}
+.myGood {
+}
+
+.myThanLwin {
+    display: block;
+    text-align: right;
+    font-size: small;
+}
+
+img {
+    padding: 0px;
+}
+
+img.screenshot {
+	padding: 1em;
+	display: block;
+}
+
+span.md5 {
+	font-size: 0.67em;
+}
+
+
+pre {
+    background: #ffffd0;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #c07000;
+    padding: 0.3em;
+	overflow: auto;
+}
+
+.keyboardTopBar {
+    background: #c07000;
+}
+
+td.keyButton {
+    background: #ffffb0;
+}
+
+div.keyboard, td.keyboard {
+    background: #ffffd0;
+}
+
+table.consonants, table.vowels, td.keyButton, td.keyboard {
+}
+div.keyboard p.keyboardTab { background-color: #ffffb0; }
+div.keyboard span.tabOn { background-color: #ffffb0; color: #e07000; }
+div.keyboard a.tabOff { background-color: #c07000; }
+
+.playControl { 
+    -moz-border-radius: 5px; border-style: solid; border-width: 2px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: rgb(200,200,200);
+}
+#logo { margin-left: 0px; top: 10px; left: 10px; position: absolute; }
+#glyphProperties { padding: 10px; }
+div.box {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-color: #c07000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: dotted;
+    border-right-style: dotted;
+    width: 250px;
+    /*float: left;*/
+    vertical-align: top;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    background: #ffffd0;
+}
+</style>
+</head>
+<body>
+<img src="ThanLwin.jpg" id="logo"/>
+<h1>ThanLwinSoft</h1>
+<div class="box">
+<h2>Myanmar Unicode</h2>
+<p>Guide to using <a href="ThanLwinSoft/MyanmarUnicode/gettingStarted.php">Myanmar Unicode</a> keyboard and fonts. <span class="my"><a href="ThanLwinSoft/MyanmarUnicode/gettingStarted.php">မြန်မာယူနီကုတ်</a> ကီးဘုတ်နှင့်ဖောင့်များ အသုံးပြုခြင်း ညွှန်ကြားချက်။</span></p>
+</div>
+
+<div class="box">
+<h2>DocCharConvert</h2>
+<p><a href="ThanLwinSoft/DocCharConvert">DocCharConvert</a> is a program to convert text and Open Document files between different font encodings. There is also an <a href="ThanLwinSoft/MyanmarUnicode/Conversion/myanmarConverter.php">Online Myanmar Font Converter</a>.</p>
+</div>
+
+<div class="box">
+<h2>Language Buddy</h2>
+<p><a href="LanguageBuddy/">Software for learning a foreign language</a> using vocab modules and sound recordings.</p>
+</div>
+
+<div class="box">
+<h2>Ekaya keyboard</h2>
+<p><a href="ThanLwinSoft/Ekaya/">Ekaya</a> is a smart input method for Windows based on KMFL and compatible with Keyman. It includes a Myanmar Unicode 5.1 keyboard.</p>
+</div>
+
+<div class="box">
+<h2>Graphite OpenOffice Extension</h2>
+<p>The <a href="GraphiteOOoExt/">Graphite OpenOffice.org Extension</a> enables the Graphite Font Rendering functionality in OpenOffice 3.2 and above to be enabled and disabled and makes it easy to use Graphite Font Features.</p>
+</div>
+
+<div class="box">
+<h2>Myanmar OpenOffice Extension</h2>
+<p>The <a href="myoooext/">Myanmar OpenOffice Extension</a> provides line breaking and spellchecking for Burmese Unicode. <span class="my">﻿မြန်မာစကားလုံးများကြားမှာ ဖြတ်တောက်သည်။  စာလုံးပေါင်းစစ်ဆေးသည်။</span></p>
+</div>
+
+<div class="box">
+<h2>Myanmar Converter Firefox Extension</h2>
+<p>The <a href="MyanmarConverter/">Myanmar Converter Extension</a> converts web pages automatically from ZawGyiOne to Unicode 5.1.</p>
+<p class="my">မြန်မာ ဝက်ဘ်စာမျက်နှာမှာ ဇော်ဂျီက ယူနီကုတ် ၅ ဒသမ ၁ အထိ ပြောင်းပါသည်။</p>
+</div>
+
+<div class="box">
+<h2>Software Repositories</h2>
+<p>Developers wanting to browse the source code for ThanLwinSoft Software can view the <a href="cgi-bin/hgwebdir.cgi/">Mercurial repositories</a>. For example, if you want to download the MyanmarParser repository, you can use <br/>
+<tt>hg clone http://thanlwinsoft.co.uk/cgi-bin/hgwebdir.cgi/MyanmarParser/</tt></p>
+</div>
+
+<div class="box">
+<h2>Bug Reports and Issues</h2>
+<p>Please <a href="/indefero/index.php">report bugs</a> you find in ThanLwinSoft Software</p>
+</div>
+
+<div class="box">
+<h2>GrSVG</h2>
+<p><a href="_keith/grsvg.php">GrSVG</a> is a tool for debugging fonts and viewing the code point to glyph mapping for Smart fonts.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Web Development</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/thanlwin.css"/>
+<link href="../../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="Myanmar Unicode, web developers, browser, detection" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../../_shared/';myUnicode.initParse('../../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/WebDevelopers/myWebEg.php" title="Myanmar Unicode Support Detection">Detecting Support</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/WebDevelopers/myWebEgKeyboard.php" title="Myanmar Unicode Web Keyboard">Keyboard</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/WebDevelopers/myWebEgSvg.php" title="Using SVG to display Myanmar Unicode">SVG Font</a></li>
+</ul></li></ul></li><li class="contentsDir"><a href="../../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>A Guide to Using Myanmar Unicode</h1>
+<h2>Web Development</h2>
+<div>
+<ul>
+<li><a href="#background">Background</a></li>
+<li><a href="#detect">Detecting Myanmar Unicode Web Browser Support</a></li>
+<li><a href="#virtualKey">Virtual Myanmar Unicode Keyboard</a></li>
+<li><a href="#examples">Example Code</a></li>
+</ul>
+<h3><a id="background">Background</a></h3>
+<p>Many existing Myanmar websites use images to represent Myanmar text because of the problems with fonts that are pretending to be English. A few sites use a specific font, but if the user does not have a font of exactly that name installed the text appears as an apparently random sequence of English (i.e. Latin) characters. </p>
+<p>One of the key benefits of Unicode is that the script can be identified from the numbers used to represent this character. In theory, the browser should therefore be able to use an alternative font to display the text correctly, even if it can't find a font of precisely the right name.</p>
+<p>Unfortunately some browsers are unable to display Myanmar Unicode correctly. As a result some web developers are using pseudo-Unicode fonts which use some Unicode code points mixed with non-standard ones. The problem with this is it makes it harder to adopt real unicode. The text will display completely wrong in a Unicode enabled browser if another Unicode font is installed. If a pseudo-Unicode font is installed, then it may prevent Unicode compliant pages displaying correctly.</p> 
+<p>This page outlines how web pages can be designed to use Myanmar Unicode, whilst still allowing for non-compliant browsers.</p>
+<h3><a id="detect">Detecting Myanmar Unicode Support</a></h3>
+<script>myUnicode.checkWithMsg();</script>
+<p>There is no point in writing a Myanmar Unicode web site if the user can't read it. It is therefore useful to be able to detect whether a user has a Myanmar Unicode enabled Web Browser. However, this is fairly easy to do. </p>
+<p>A simple detection algorithm can be written by comparing the width of <span class="my">ကက</span> (U+1000 U+1000) with the width of <span class="my">က္က</span> (U+1000 U+1039 U+1000). A Myanmar Unicode enabled browser renders U+1000 U+1039 U+1000 with the 2 consonants stacked on top of each other, so it should therefore have half the width of U+1000 U+1000.
+A non-compliant browser will not interpret the U+1039 correctly and so renders it as 2 consonants of twice the width. 
+If a Myanmar font is not installed, it will actually have 3 times the width, with blank squares. Obviously, there are lots of possible variations for this test. 
+</p>
+<p>If the user does not have Unicode Support enabled, you can switch to images, embedded SVG (Scalable Vector Graphics), VML (Microsoft's Vector Markup Language) or Canvas objects. The myUnicode detection algorithm used on this site automatically switches to Canvas objects in Firefox and Opera, since that can be dynamically scaled and coloured. On IE is uses VML. It uses a predefined list of Myanmar syllables and displays one image per syllable. This relies on having a complete syllable list, which is not easy to obtain especially for rare stacked characters and foreign words. This has several advantages over the old method of creating an image for every line or paragraph:
+<ul>
+<li>data only needs to be created once and does not need to be changed even if the text on your web site changes</li>
+<li>data can be used for text entered by users themselves using an overlay on top of an input box/textarea</li>
+<li>syllable based dynamic word wrapping is supported for all browser widths</li>
+<li>users with the full unicode support don't have to wait for images to download</li>
+<li>pages are still searchable</li>
+</ul>
+</p>
+<p>The Canvas solution is much neater than images, though it still requires knowledge of which sequences need complex rendering. Unfortunately IE does not yet have SVG support or Canvas support so VML is used instead. The Canvas algorithm used here relies on data generated using the <a href="http://scripts.sil.org/svn-view/graphite/grutils/trunk/grsvg/">grsvg</a> program.</a>. The embedded Canvas or VML objects are inserted dynamically using javascript in place of the orginal Unicode text. The characters are drawn using path elements using precached positions for each Unicode sequence.</p>
+<p>
+This javascript files are generated from a TTF font as follows:
+</p>
+<pre>
+grsvg --svg-font Padauk.ttf
+xsltproc svgFont2json.xsl Padauk.svg > Padauk.js
+grsvg Padauk.ttf -i syllables.txt -j PadaukRendered.js
+</pre>
+<h3><a id="virtualKey">Virtual Keyboard</a></h3>
+<p>
+Many websites have forms which require the user to type input. However, how can the user type Myanmar Unicode if they don't have a suitable <a href="../InputMethods/">input method</a> installed? One method is to use a JavaScript keyboard. This can be used, even without Myanmar Unicode support by converting to images.
+</p>
+<script type="text/javascript">
+<!--
+function showUnicodes()
+{
+  var input = document.getElementById('textInput');
+  var unicodeDump = document.getElementById("unicodeDump");
+  while (unicodeDump.hasChildNodes())
+  {
+    unicodeDump.removeChild(unicodeDump.lastChild);
+  }
+  var text = input.value;
+  for (var i = 0; i<text.length; i++)
+  {
+    var num = document.createTextNode("&#" + text.charCodeAt(i) + ";" + " ");
+    unicodeDump.appendChild(num);
+  }
+}
+myK.afterKey = function()
+{
+  showUnicodes();
+}
+-->
+</script>
+<form>
+<input type="text" onchange="showUnicodes()" id="textInput" class="my"></input><br/>
+<!--
+<a href="javascript:myK.toggleLangKeyboard('my');myK.switchInput('textInput')" class="my">
+ခလုတ်ကွက်ပြ
+</a>-->
+<span id="unicodeDump">Click on some characters to see their codes.</span>
+</form>
+<h3><a id="examples">Examples</a></h3>
+<p>
+You can <a href="../../Downloads/#myWeb">download</a> this code as examples to use on your own website. The latest version is in Mercurial:
+</p>
+<pre>
+hg clone http://thanlwinsoft.co.uk/cgi-bin/hgwebdir.cgi/myWebDevelopment/
+</pre>
+</div>
+<p class='right'><a href='../../MyanmarUnicode/WebDevelopers/myWebEg.php'>Detecting Support&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

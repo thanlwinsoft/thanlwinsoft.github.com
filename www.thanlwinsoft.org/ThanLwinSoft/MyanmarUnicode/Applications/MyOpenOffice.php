@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Using OpenOffice with Myanmar</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/thanlwin.css"/>
+<link href="../../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="Using OpenOffice with Myanmar" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../../_shared/';myUnicode.initParse('../../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/Mozilla.php" title="Mozilla Firefox (Web Browser) and Thunderbird (Email)">Web/Email</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/MozillaTranslation.php" title="Myanmar translation of Firefox and Thunderbird">မီးမြေခွေး</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/OpenOffice.php" title="OpenOffice Word Processor, Spreadsheet etc.">OpenOffice</a></li>
+<li class="currentDoc"><span>Using OOo</span></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/Pango.php" title="Gnome and GTK Applications on Linux with Pango Support">Pango/GTK</a></li>
+</ul></li><li class="contentsDir"><a href="../../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+</ul></li><li class="contentsDir"><a href="../../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>A Guide to Using Myanmar Unicode</h1>
+<h2>Using OpenOffice with Myanmar</h2>
+<div>
+<p>The default OpenOffice settings are not ideal for using Myanmar. This page outlines how it can be set up to work better with Myanmar Unicode. These instructions assume that you are using at least OpenOffice 3.1 or a <a href="http://my.openoffice.org/">special build of OpenOffice</a>, which has had <a href="http://my.openoffice.org/">Myanmar support</a> added.</p>
+<p>
+There are several configuration steps that are needed to use OpenOffice with Myanmar language after installation.  
+</p>
+<h2>Changing the User Interface Font</h2>
+<p><b>This step is essential if you have enabled the Burmese User Interface using a Myanmar Language Pack</b></p>
+<p>OpenOffice uses the default System font for displaying Menus, dialog boxes etc. This means that if the System font does not have Myanmar glyphs, then you will see blank squares if you have enabled the Burmese User Interface or when you type Myanmar in the Find and Replace dialog or select Myanmar Numbers in the Format Cells dialog.</p>
+<p>On Windows you can change the font as follows:</p>
+<ol>
+<li>Right click on the desktop and choose Properties.</li>
+<li>Click the Appearance Tab and click the Advanced button.</li>
+<li>Change the Item to <i>Message Box</i></li>
+<li>Change the font to a Myanmar font e.g. Padauk. You may want to adjust the size as well.</li>
+<li>Change the <i>Menu</i>, <i>ToolTip</i>, <i>Active Title Bar</i> font in the same way.</li>
+<li>Click OK and Apply.<img class="screenshot" width="404" height="448" src="WinMsgBoxFont.png" /></li>
+</ol>
+<p>On Linux you can change the font as follows:</p>
+<ol>
+<li>Open the Gnome Font dialog. e.g. System->Preferences->Font.</li>
+<li>Change the application font to a Myanmar font. You may want to adjust the size as well.</li>
+</ol>
+<h2>Enabling Myanmar Locale</h2>
+<ol>
+<li>Open OpenOffice.org Writer.</li>
+<li>Choose Tools->Options from the Menu and go to the <i>Language Settings /  Languages</i> section on the left hand side.</li>
+<li>Change the Locale setting to Myanmar (Burmese) - this will take affect the next time you restart OpenOffice.</li>
+<li>Tick the item "Enabled for complex text layout (CTL)" (at the bottom).</li>
+<li>Change the CTL language to Myanmar from the drow down list.
+<img class="screenshot" width="661" height="312" src="OOoLanguages.png" /></li>
+<li>Click OK and reopen Tools->Options and goto the <i>OpenOffice.org Writer / Basic Fonts (CTL)</i> Section. (You need to reopen the Options dialog for the CTL section to appear)</li>
+<li>Change the default font for CTL to a Myanmar Unicode font that is installed on your computer e.g. Padauk.<img class="screenshot" width="512" height="304" src="OOoBasicFontsCTL.png" /></li>
+<li>Click OK.</li>
+<li>Choose Tools->Auto Correct from the menu.</li>
+<li>In the Word Completion tab untick Collect words.<img class="screenshot" width="559" height="474" src="OOoWordCompletion.png" /></li>
+</ol>
+
+<h2>Myanmar features</h2>
+<p>The main Myanmar specific features that are available are:</p>
+<ul>
+<li>Formating of numbers/currency in Myanmar language.</li>
+<ol>
+<li>Open OpenOffice.org Calc.</li>
+<li>Right click on a cell and choose <i>Format Cells</i></li>
+<li>In the Number tab you can select Myanmar.</li>
+<li>Choose an appropriate number format.<img class="screenshot" width="559" height="443" src="OOoNumbers.png" /></li>
+</ol>
+<li>Sorting according to Myanmar Dictionary Order.</li>
+<ol>
+<li>Select the columns that you want to sort.</li>
+<li>Choose Data->Sort and select the Options tab.</li>
+<li>Change the language to Myanmar (if you have restarted since setting the Myanmar locale in <i>Options - Language Settings - Languages</i> then it should already be selected). <img class="screenshot" width="559" height="443" src="OOoSort.png" /></li>
+</ol>
+</ul>
+<h2>Configuring Styles</h2>
+<p>You may want to change the default style of an existing document to use a Myanmar Unicode font automatically.</p>
+<ol>
+<li>Open the Styles and Formating dialog from the Format menu if it is not already open.</li>
+<li>Right click on Default and choose Modify.</li>
+<li>Change the CTL language and font as appropriate.<img class="screenshot" width="503" height="405" src="OOoParagraphStyle.png" /></li>
+</ol>
+</div>
+<p class='right'><a href='../../MyanmarUnicode/Applications/Pango.php'>Pango/GTK&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

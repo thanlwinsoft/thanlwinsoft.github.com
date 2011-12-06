@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>DocCharConvert: A Converter between different font encodings</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../_shared/thanlwin.css"/>
+<link href="../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="A Converter between different font encodings" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../_shared/';myUnicode.initParse('../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../"><img class="fleft" src="../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../" title="ThanLwinSoft">Home</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+<li class="currentDir"><a href="../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>DocCharConvert</h1>
+<h2>A Converter between different font encodings</h2>
+<div>
+<ul class="tabs" id="tabList">
+<li class="tab" onclick="showTab(this, 'introduction')" style="background-color: #fffff0;">Introduction</li>
+<li class="tab" onclick="showTab(this, 'installation')">Installation</li>
+<li class="tab" onclick="showTab(this, 'gettingStarted')">Getting Started</li>
+<li class="tab" onclick="showTab(this, 'commandLine')">Command Line</li>
+<li class="tab" onclick="showTab(this, 'troubleshooting')">Trouble Shooting</li>
+</ul>
+<div id="tabs"><div id="introduction">
+
+<h1 xmlns="http://www.w3.org/1999/xhtml">Document Character Converter</h1>
+<h2 xmlns="http://www.w3.org/1999/xhtml">DocCharConvert: Introduction</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">Document Character Converter is a tool to convert between different encoding formats and different scripts.</p>
+<p xmlns="http://www.w3.org/1999/xhtml">It currently supports the following types of converters:</p>
+<ul xmlns="http://www.w3.org/1999/xhtml">
+<li>TECkit Converters [<a href="http://scripts.sil.org/TECkit">scripts.sil.org/TECkit</a>]</li>
+<li>Syllable Converters</li>
+<li>External Programs</li>
+</ul>
+<p xmlns="http://www.w3.org/1999/xhtml">It currently allows conversion of the following file types:
+</p>
+<ul xmlns="http://www.w3.org/1999/xhtml">
+<li>Plain text files</li>
+<!-- 
+<li>OpenOffice files (anything OO can import, slow)[<a href="http://www.openoffice.org/">www.OpenOffice.org</a>]</li>
+ -->
+<li>OpenDocument files (OO native format)[<a href="http://www.openoffice.org/">www.OpenOffice.org</a>]</li>
+<li>TeX Files - limited support</li>
+</ul>
+
+</div>
+<div id="installation" style="display:none;">
+
+<h1 xmlns="http://www.w3.org/1999/xhtml">DocCharConvert: Installation and Configuration</h1>
+<h2 xmlns="http://www.w3.org/1999/xhtml">Prerequisites</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">You must have Java 1.6 or later installed. You can get it from the <a href="http://java.sun.com/j2se/1.6.0/download.jsp">Sun website</a> - you only need the JRE.</p>
+<p xmlns="http://www.w3.org/1999/xhtml">For conversion of OpenOffice documents, it is recommended to have OpenOffice installed from <a href="http://www.openoffice.org">OpenOffice.org</a>.</p>
+<h2 xmlns="http://www.w3.org/1999/xhtml">Starting DocCharConvert</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">If the installation went smoothly, then you should be able to just double click on the DocCharConvert Desktop icon or start it from the Programs Menu. The DocCharConvert Main Form should appear. </p>
+<p xmlns="http://www.w3.org/1999/xhtml">If this does not work, you can start it from a command line. If you are already in the DocCharConvert installation directory, then you may be able to just type:</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+eclipse 
+</pre>
+If you need to specify a different Java virtual machine you can use something like:
+<pre xmlns="http://www.w3.org/1999/xhtml">
+eclipse -jvm "C:\Program Files\Java\jre1.6.0_06\bin\java.exe"
+</pre>
+You will need to adjust the paths as appropriate to your system.
+<h2 xmlns="http://www.w3.org/1999/xhtml">Configuration</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">Choose Preferences from the Window menu.</p>
+<p xmlns="http://www.w3.org/1999/xhtml">You can change the Converter directory by browsing to the directory containing the converters and select one of the <tt>dccx</tt> files.</p>
+<p xmlns="http://www.w3.org/1999/xhtml">The built in converters will be in directories under plugins in the installation directory.</p>
+<!--
+<h3>OpenOffice integration</h3>
+<p>The OpenOffice tab allows you to link DocCharConvert to your OpenOffice installation, if you have one. Browse to the program sub-directory of your OpenOffice installation and select the OpenOffice executable. Usually this is <tt>soffice</tt> or <tt>ooffice</tt> or <tt>ooffice2</tt>.
+</p>
+<p>You are unlikely to need to change the default options, the following should work:</p>
+<pre>-accept=socket,port=8100,tcpNoDelay=1;urp;</pre><p> with the UNO address set to:</p>
+<pre>uno:socket,host=localhost,port=8100,tcpNoDelay=1;urp;StarOffice.ServiceManager</pre>
+-->
+
+
+</div>
+<div id="gettingStarted" style="display:none;">
+
+<h1 xmlns="http://www.w3.org/1999/xhtml">DocCharConvert: Getting Started</h1>
+
+<h2 xmlns="http://www.w3.org/1999/xhtml">Converting some files</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">Open the 
+
+Document Conversion Wizard
+
+ from the File Menu or by clicking on the 
+<img src="styles/DocCharConvert16.png" style="width: 16px; height: 16px;" alt="icon"/>
+ icon.</p>
+<ol xmlns="http://www.w3.org/1999/xhtml">
+<li>You can either convert existing files or type / paste the text directly.</li>
+<li>If you choose to convert existing files, then you need to select the <i>File Mode</i>, usually "Plain Text" or "OpenOffice".</li>
+<li>Click next</li>
+<li>Select the converter that you want to use and click Next. (The font choices are only used with OpenOffice files)</li>
+<li>If you chose to convert existing files, then you need to choose which files to convert:
+<ol>
+<li>Browse to the file that you want to convert</li>
+<li>Browse to the file where you want to save the conversion result</li>
+<li>Add more files if necessary and click Next</li>
+</ol></li>
+<li>Set the encoding of the Input and Output files. If you are not sure what to use, Windows-1252 is a common encoding used by older fonts. More modern Unicode files probably use UTF-8 or UTF-16.</li>
+<li>Click Finish</li>
+</ol>
+<p xmlns="http://www.w3.org/1999/xhtml">If you want to convert the same set of files lots of times, you may want to save the list of files in a text file. 
+You can do this by clicking the <i>Save List</i> button. 
+You can then reload it with <i>Load List</i>. 
+The list is saved a simple text file format with one file pair per line:</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+"input file.txt" "output file.txt"
+</pre>
+<h2 xmlns="http://www.w3.org/1999/xhtml">File Encoding</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">
+The file encoding refers to the standard that is used to map the raw bytes in a file into specific characters in a font. 
+For correct results, you need to know what format the files are in that you want to convert.
+</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+OpenOffice supports many document formats, so that may be the best choice for any non-text files. 
+You will need to open the files in OpenOffice and save them in OpenDocument format before conversion. 
+If you are using text files, then you need to know the encoding of the text in the files. 
+The default on many versions of Windows is windows-1252, however UTF-8 or another Unicode format will probably be necessary for non-Latin languages. 
+If you are converting from text in an old legacy font to Unicode, then you will probably want Windows-1252 for Input and UTF-8 for Output.
+</p>
+
+
+</div>
+<div id="commandLine" style="display:none;">
+
+<h1 xmlns="http://www.w3.org/1999/xhtml">DocCharConvert: Command Line</h1>
+<h2 xmlns="http://www.w3.org/1999/xhtml">Command Line Usage</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">If you are running lots of conversions on a regular basis you may want to use 
+a command line version of the tool.</p>
+<p xmlns="http://www.w3.org/1999/xhtml">Make sure that the correct version of Java is in your path. Change directory
+to the DocCharConvert directory which has plugins as a subdirectory. You can then run the
+ command:</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+java -cp plugins/org.thanlwinsoft.doccharconvert_1.0.0.jar org.thanlwinsoft.doccharconvert.CommandLine 
+</pre>
+<p xmlns="http://www.w3.org/1999/xhtml">On Windows you can run the DocCharConvert.bat script from a Windows Command Console.</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+cd C:\Program Files\ThanLwinSoft.org\DocCharConvert
+DocCharConvert.bat
+</pre>
+<p xmlns="http://www.w3.org/1999/xhtml">You can see the command line options with the --help option:</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+Using config dir:C:\Program Files\ThanLwinSoft.org\DocCharConvert
+Arguments: [-i iEnc] [-o oEnc] [-r] converter.dccx mode 
+           [-f list]|[inputFile outputFile]
+           [--converters ConvertersPath]
+Modes:
+	0	Plain Text
+	1	OpenOffice
+	2	TeX
+	3	OpenDocument
+Optional Arguments:
+	--help display this help
+	-r use the converter in reverse mode
+	-i iEnc = input encoding e.g. -i iso-8859-1 (default UTF-8)
+	-o oEnc = output encoding e.g. -o iso-8859-1 (default UTF-8)
+	-f fileList = file containing list input output files
+	--converters path = change the default Converters dir to path
+Please choose from one of the following converters:
+	Academy.dccx
+	AcademyExt.dccx
+	AcademyPipe.dccx
+	IwinMedium.dccx
+	Winnwa.dccx
+	Wwin_burmese.dccx
+	MyanmarUni4ToUni5.dccx
+	WinnwaUTN11.dccx
+</pre>
+<p xmlns="http://www.w3.org/1999/xhtml">
+The list of converters may vary according to what is installed on your system.
+</p>
+<p xmlns="http://www.w3.org/1999/xhtml">For example, to convert a text file in WinInnwa to Myanmar Unicode, 
+you would something like type:</p>
+<pre xmlns="http://www.w3.org/1999/xhtml">
+DocCharConvert.bat -i windows-1252 Winnwa.dccx 0 wininnwa.txt myUni.txt
+</pre>
+
+</div>
+<div id="troubleshooting" style="display:none;">
+
+<h1 xmlns="http://www.w3.org/1999/xhtml">DocCharConvert: Trouble Shooting</h1>
+
+<h2 xmlns="http://www.w3.org/1999/xhtml">Garbled Data</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">Some of the data may be converted correctly, other data isn't. This probably 
+means that you have got the encoding specified wrongly for either the Input or 
+Output files. Check the original source of the data and the documentation for 
+the specific converter that you are using. Internally, the text is all converted 
+to Unicode before it is processed. If the encoding that you are using has codes 
+that cannot be translated to Unicode then these may fail to be converted 
+correctly. Old files created with legacy pre-Unicode fonts should probably be 
+converted as Windows-1252 with the Output set to UTF-8. </p>
+<p xmlns="http://www.w3.org/1999/xhtml">Some legacy fonts use code points that are undefined in Windows-1252. 
+In this case you may want to try the RawBytes encoding.</p>
+
+<h2 xmlns="http://www.w3.org/1999/xhtml">Other Problems and Bugs</h2>
+<p xmlns="http://www.w3.org/1999/xhtml">For other problems and bugs please send an email to 
+devel<span style="display:none">NO JUNK</span>@thanlwinsoft.org.
+Please try to be as explicit as possible in describing your problem. 
+If it is a case of incorrect conversion, then it is very hard to diagnose 
+problems unless I can reproduce it.
+If possible, please send some example files (though not too big please!) that 
+illustrate the problem.
+</p>
+
+</div>
+</div>
+
+<h3>Downloads</h3>
+<ul><li><a href='../Downloads/Converters/DocCharConvert-linux.gtk.x86.tar.bz2' title='30 Dec 2010 [49,115KB]' style='font-size: 0.6em;'>DocCharConvert-linux.gtk.x86.tar.bz2</a></li>
+<li><a href='../Downloads/Converters/doccharconvert-1.4.504.tar.bz2' title='30 Dec 2010 [15,048KB]' style='font-size: 0.6em;'>doccharconvert-1.4.504.tar.bz2</a></li>
+<li><a href='../Downloads/Converters/doccharconvert-1.4.498.tar.bz2' title='20 Dec 2010 [15,050KB]' style='font-size: 0.6em;'>doccharconvert-1.4.498.tar.bz2</a></li>
+<li><a href='../Downloads/Converters/DocCharConvert-1.3.0.exe' title='09 Jun 2009 [53,082KB]' style='font-size: 0.6em;'>DocCharConvert-1.3.0.exe</a></li>
+<li><a href='../Downloads/Converters/DocCharConvert-1.2.1.exe' title='19 Apr 2009 [52,618KB]' style='font-size: 0.6em;'>DocCharConvert-1.2.1.exe</a></li>
+<li><a href='../Downloads/Converters/DocCharConvertInstaller20060618.jar' title='07 Feb 2009 [925KB]' style='font-size: 0.6em;'>DocCharConvertInstaller20060618.jar</a> <span class='md5'>(<a href='../Downloads/Converters/DocCharConvertInstaller20060618.jar.md5sum.txt'>MD5Sum</a>)</span></li>
+</ul>
+</div>
+<p class='right'><a href='../LanguageBuddy/'>LanguageBuddy&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

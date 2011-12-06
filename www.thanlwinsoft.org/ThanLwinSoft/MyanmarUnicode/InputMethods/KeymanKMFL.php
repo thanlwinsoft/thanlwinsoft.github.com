@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Keyman / KMFL-SCIM</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/thanlwin.css"/>
+<link href="../../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="Myanmar Unicode, Input Method, keyboard, Keyman, SCIM" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../../_shared/';myUnicode.initParse('../../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a><br />
+<ul class="contents"><li class="currentDoc"><span>Keyman/KMFL</span></li>
+</ul></li><li class="contentsDir"><a href="../../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+</ul></li><li class="contentsDir"><a href="../../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>A Guide to Using Myanmar Unicode</h1>
+<h2>Keyman / KMFL-SCIM</h2>
+<div>
+<p>
+Tavultesoft Keyman on Windows and the related KMFL module for SCIM on Linux provide good support for Myanmar Unicode. I've now developed an Open Source alternative for Windows called <a href="../../Ekaya/">Ekaya</a>, which is based on KMFL. <a href="http://www.tavultesoft.com/">Tavultesoft Keyman</a> was until recently free for personal use.  You need to pay to compile keyboards, but the keyboards here have been already compiled. KMFL can use the same Keyboard Source files as Keyman, but it is covered by a GPL license. KMFL is a module for SCIM, the <a href="http://www.scim-im.org/">Smart Common Input Method</a> framework on Linux. You can download KMFL source and binaries from <a href="http://kmfl.sourceforge.net/">Source Forge</a>.</p>
+<p>
+A few Myanmar Unicode keyboard layouts are now available for Keyman. <a href="../../Downloads/index.php#keyboards">myWin</a> (loosely based on the traditional layout used by WinMyanmar fonts) supports Unicode 5.1. Myanmar NLP has also developed one for the Myanmar3 font, but it should be compatible with Padauk and other fonts compliant to Unicode 5.1.</p>
+<p>
+The Unicode layouts do not exactly match the old layouts because all the old fonts relied on complicated Alt and Ctrl key code combinations to get the different glyph combinations. With a smart input method this is no longer needed so all the Myanmar characters can be typed using only the normal keyboard keys + Shift combinations.</p>
+<h3>my-Win</h3>
+<iframe src="myWin.html" style="width: 100%; height: 500px;">
+</iframe>
+<h3>Ekaya Setup (Windows)</h3>
+<p>Run the <a href="../../Downloads/#keyboards">Ekaya installer</a> and make sure that you have 
+the language bar enabled under <i>Control Panel / Regional and Language Options</i>.</p>
+<h3>Keyman Setup (commercial alternative on Windows)</h3>
+<p>Run the Keyman installer <a href="../../Downloads/#keyboards">my-Win installer</a> and choose which version of Keyman you want. If you are a home user, the Home Use edition is free and perfectly adequate for your needs. Other users will need to purchase a license from Tavultesoft. If you already have Keyman installed, then you can just download the <tt>.kmx</tt> files and double click on them to install them. You can switch keyboards by clicking on the Keyman icon in the task tray. You may need to enable support for an &ldquo;Unknown Language&rdquo; in the Keyman Options dialog.</p>
+<h3>KMFL Setup (Linux)</h3>
+<p>
+Download the appropriate RPMs or Debian packages for your Linux distribution from <a href="http://sourceforge.net/projects/kmfl">kmfl.sourceforge.net</a> or build from source. </p>
+<p>
+Download an appropriate <tt>.kmn</tt> file from <a href="../../Downloads/#keyboards">keyboard downloads</a> and create a <tt>kmfl</tt> directory either as <tt>~/.scim/kmfl</tt> (current user only) or <tt>/usr/share/scim/kmfl</tt> (system wide) and then copy the <tt>*.kmn</tt> files and the icons directory into this directory.</p>
+<p>In most GTK applications you can select SCIM as the input method by right clicking and choosing <i>Input Methods->SCIM Input Method</i>. </p>
+<p>The default SCIM and SCIM-Bridge Input Modules work well in GTK applications. You can select these from the Input Methods item on the right click menu in most GTK applications. However, in OpenOffice, you may need to set some variables to get KMFL to work correctly. You can test this by closing OpenOffice and then running the following from the terminal:</p>
+<pre>
+GTK_IM_MODULE=xim XMODIFIERS=@im=SCIM oowriter
+</pre>
+If this allows you to use KMFL correctly, then on Ubuntu systems you can add the following lines to <tt>/etc/openoffice/soffice.sh</tt>:
+<pre>
+export GTK_IM_MODULE=xim
+export XMODIFIERS=@im=SCIM
+</pre>
+<p>Firefox also needs the GTK_IM_MODULE to be set to xim rather than scim or scim-bridge. This can be done at the top of the firefox shell script <tt>/usr/lib/firefox-3.0.10/firefox.sh</tt> (version number may vary). </p>
+<p>If you are using a my_MM.UTF-8 locale then this may also cause problems for SCIM. Try adding the line <tt>export LANG=en_US.UTF-8</tt> in the soffice.sh and firefox.sh scripts.</p>
+<p>
+If you built from source code then you will probably need to add <tt>LD_LIBRARY_PATH=/usr/local/lib</tt> as well. For more details see <a href="http://prdownloads.sourceforge.net/kmfl/KMFL-Installation-Instructions.sxw?download">KMFLInstallationInstructions.sxw</a>.</p>
+</div>
+<p class='right'><a href='../../MyanmarUnicode/Applications/'>Applications&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

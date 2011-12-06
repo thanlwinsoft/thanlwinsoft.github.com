@@ -1,0 +1,12 @@
+
+body { background-color: #ffffd0; }
+
+h1 { font-size: 14pt; font-weight: bold; }
+h2 { font-size: 14pt; font-weight: normal; font-style: italic; }
+
+a img { padding: 0px; }
+
+/* satisfy Mozilla */	
+body > div.page-style {
+	padding-left:5%;
+}

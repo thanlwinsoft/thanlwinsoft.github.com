@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>ThanLwinSoft.org: Myanmar Unicode Downloads</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../_shared/thanlwin.css"/>
+<link href="../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="ThanLwin Soft" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../_shared/';myUnicode.initParse('../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../"><img class="fleft" src="../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../" title="ThanLwinSoft">Home</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+<li class="contentsDir"><a href="../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="currentDir"><a href="../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>ThanLwinSoft.org</h1>
+<h2>Myanmar Unicode Downloads</h2>
+<div>
+<ul>
+<li><a href="#fonts">Myanmar Unicode Fonts</a></li>
+<li><a href="#keyboards">Keyman / KMFL Myanmar Unicode Keyboards</a></li>
+<li><a href="#OOoGr">Graphite OpenOffice</a></li>
+<li><a href="#moz">Mozilla Firefox/Thunderbird Translation</a></li>
+<li><a href="#teckit">Myanmar TECkit &amp; DocCharConvert</a></li>
+<li><a href="#collate">Myanmar Collation</a></li>
+<li><a href="#java">Graphite JNI</a></li>
+<li><a href="#myWeb">Myanmar Unicode Website Examples</a></li>
+<li><a href="http://thanlwinsoft.co.uk/cgi-bin/hgwebdir.cgi/">ThanLwinSoft Source Code (Mercurial Repository)</a></li>
+<!--
+<li><a href="#rpms">Linux Fedora Core 3 RPMS</a></li>
+<li><a href="#srpms">Linux Fedora Core 3 SRPMS</a></li>
+-->
+</ul>
+<p>Ubuntu users can try using the prebuilt packages. You can add the following lines
+ to your <tt>/etc/apt/sources.list</tt> file. You made need to change <i>karmic</i> to match your Ubuntu release.</p>
+<pre>
+# KMFL and Pangographite from SIL
+deb http://packages.sil.org/ubuntu karmic main
+deb-src http://packages.sil.org/ubuntu karmic main
+# Keyboard and locale from ThanLwinSoft
+deb http://www.thanlwinsoft.org/ThanLwinSoft/Downloads/ubuntu karmic main
+deb-src http://www.thanlwinsoft.org/ThanLwinSoft/Downloads/ubuntu karmic main
+</pre>
+<p>Most of the packages are signed. You can add the ThanLwinSoft key to apt's list by installing the <a href="http://www.thanlwinsoft.org/ThanLwinSoft/Downloads/ubuntu/pool/main/t/thanlwinsoft-keyring/thanlwinsoft-keyring_2009.09.15_all.deb">thanlwinsoft-keyring</a> package. Several packages depend on those in the SIL repository. For details on how to install the SIL keys see <a href="http://packages.sil.org/">packages.sil.org</a></p>
+
+<p>
+Open Synaptic, click Reload and browse the packages by clicking www.thanlwinsoft.org/main in the Origin pane.</p>
+<p>You can verify the integrity of files downloaded manually using the command line <tt>md5sum</tt> program and comparing the result to the ones given here. <br />e.g. if you downloaded <tt>myKeyboards20050228.zip</tt> to the current directory:</p>
+<pre>
+md5sum myKeyboards20050228.zip
+</pre>
+<p>will give</p>
+<pre>
+b0c173e0ed21b08427a03678967947a0  myKeyboards20050228.zip
+</pre>
+
+<h3 id="fonts">Myanmar Unicode Fonts</h3>
+<h4>ThanLwin Font</h4>
+<p>ThanLwin is a Myanmar Unicode font covering the Burmese code points.</p>
+<p class="myWarning">This font is currently only an alpha release. Please <a href="http://thanlwinsoft.org/indefero/index.php/p/thanlwinfont/issues/">report</a> any problems that you find.</p>
+<p>Please download the zip file and extract the fonts into your computer's font directory. The src file is only for developers.</p>
+<ul><li><a href='Fonts/thanlwinfontsrc-0.003.tar.bz2' title='14 Feb 2011 [248KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.003.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.003.zip' title='14 Feb 2011 [1,186KB]' style='font-size: 0.6em;'>thanlwinfonts-0.003.zip</a></li>
+<li><a href='Fonts/thanlwinfontsrc-0.002.tar.bz2' title='09 Feb 2011 [246KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.002.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.002.zip' title='09 Feb 2011 [1,186KB]' style='font-size: 0.6em;'>thanlwinfonts-0.002.zip</a></li>
+<li><a href='Fonts/thanlwinfontsrc-0.001.tar.bz2' title='30 Sep 2010 [235KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.001.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.001.zip' title='30 Sep 2010 [947KB]' style='font-size: 0.6em;'>thanlwinfonts-0.001.zip</a></li>
+</ul>
+<h4>Padauk Font</h4>
+<p>The official web page for Padauk is <a href="http://scripts.sil.org/Padauk">http://scripts.sil.org/Padauk</a>. The font was produced by Martin and Debbi Hosken under the <a href="http://scripts.sil.org/OFL">SIL Open Font License</a>. Padauk versions after 2.2 contain both OpenType and Graphite tables and have been updated to include the changes in Unicode 5.1 and 5.2.</p>
+<!--
+<p>Version 1.1 uses <a href="http://www.unicode.org/notes/tn11/">UTN11</a> to work around ambiguities in the Unicode 4 specification. </p>
+<p>Version 2.0 of the font implements the proposals that are in the <a href="http://www.unicode.org/alloc/Pipeline.html">pipeline</a> for incorporation into the Unicode specification (currently at PDAM 4). These may be subject to change. Use at your own risk.
+ </p>
+<p>PadaukOT includes both OpenType and Graphite tables so the font can be used  with the latest version of Uniscribe (included in Windows XP SP2) in non-graphite applications.</p>
+<ul><li><a href='Fonts/thanlwinfontsrc-0.003.tar.bz2' title='14 Feb 2011 [248KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.003.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.003.zip' title='14 Feb 2011 [1,186KB]' style='font-size: 0.6em;'>thanlwinfonts-0.003.zip</a></li>
+<li><a href='Fonts/thanlwinfontsrc-0.002.tar.bz2' title='09 Feb 2011 [246KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.002.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.002.zip' title='09 Feb 2011 [1,186KB]' style='font-size: 0.6em;'>thanlwinfonts-0.002.zip</a></li>
+<li><a href='Fonts/thanlwinfontsrc-0.001.tar.bz2' title='30 Sep 2010 [235KB]' style='font-size: 0.6em;'>thanlwinfontsrc-0.001.tar.bz2</a></li>
+<li><a href='Fonts/thanlwinfonts-0.001.zip' title='30 Sep 2010 [947KB]' style='font-size: 0.6em;'>thanlwinfonts-0.001.zip</a></li>
+</ul>
+-->
+<h3 id="keyboards">Myanmar Unicode Keyboards</h3>
+<p>The <b>myWin</b> Keyman keyboard supports typing Burmese conformant to Unicode 5.1. <a href="../MyanmarUnicode/InputMethods/welcome.htm">More details and the layout are available</a>.</p>
+<p><a href="../Ekaya/">Ekaya</a> is a free, Open Source port of KMFL to Windows. It includes the myWin Burmese keyboard.</p>
+<p>The myWin exe files contain an embedded Keyman installer (you have a choice of buying the licensed version from Tavultesoft or using the Free Home Edition if you are eligible).</p>
+<p>The kmx file is the compiled Keyman keyboard which you can use if you already have Keyman installed.</p>
+<p>The kmn file is the Keyman source file, which can also be used on Linux with SCIM/KMFL.</p>
+<p>MyWinE has some support for Myanmar and Sgaw Karen in Unicode 5.1.</p>
+<ul><li><a href='Keyboards/Ekaya-0.1.9_x86_64.exe' title='12 Feb 2011 [3,853KB]' style='font-size: 0.6em;'>Ekaya-0.1.9_x86_64.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.9_x86.exe' title='12 Feb 2011 [3,303KB]' style='font-size: 0.6em;'>Ekaya-0.1.9_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.9+MyanmarFonts_x86.exe' title='12 Feb 2011 [4,244KB]' style='font-size: 0.6em;'>Ekaya-0.1.9+MyanmarFonts_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.8_x86_64.exe' title='10 Feb 2011 [3,853KB]' style='font-size: 0.6em;'>Ekaya-0.1.8_x86_64.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.8_x86.exe' title='10 Feb 2011 [3,303KB]' style='font-size: 0.6em;'>Ekaya-0.1.8_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.8+MyanmarFonts_x86.exe' title='10 Feb 2011 [4,244KB]' style='font-size: 0.6em;'>Ekaya-0.1.8+MyanmarFonts_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.6_x86_64.exe' title='23 Dec 2010 [3,841KB]' style='font-size: 0.6em;'>Ekaya-0.1.6_x86_64.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.6_x86.exe' title='23 Dec 2010 [3,291KB]' style='font-size: 0.6em;'>Ekaya-0.1.6_x86.exe</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin_2.3.3.tar.gz' title='19 Oct 2010 [11KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin_2.3.3.tar.gz</a></li>
+<li><a href='Keyboards/Ekaya-0.1.5_x86_64.exe' title='12 Jul 2010 [3,832KB]' style='font-size: 0.6em;'>Ekaya-0.1.5_x86_64.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.5_x86.exe' title='12 Jul 2010 [3,282KB]' style='font-size: 0.6em;'>Ekaya-0.1.5_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.4_x86_64.exe' title='08 Jul 2010 [3,819KB]' style='font-size: 0.6em;'>Ekaya-0.1.4_x86_64.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.4_x86.exe' title='08 Jul 2010 [3,269KB]' style='font-size: 0.6em;'>Ekaya-0.1.4_x86.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.3.exe' title='10 May 2010 [2,332KB]' style='font-size: 0.6em;'>Ekaya-0.1.3.exe</a></li>
+<li><a href='Keyboards/myWin2.3.kmn' title='10 Nov 2009 [16KB]' style='font-size: 0.6em;'>myWin2.3.kmn</a></li>
+<li><a href='Keyboards/Ekaya-0.1.2.exe' title='10 Nov 2009 [2,320KB]' style='font-size: 0.6em;'>Ekaya-0.1.2.exe</a></li>
+<li><a href='Keyboards/myWin2.2.kmn' title='19 Sep 2009 [16KB]' style='font-size: 0.6em;'>myWin2.2.kmn</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin_2.2.6.tar.gz' title='19 Sep 2009 [17KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin_2.2.6.tar.gz</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin_2.2.5.tar.gz' title='07 Sep 2009 [8KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin_2.2.5.tar.gz</a></li>
+<li><a href='Keyboards/Ekaya-0.1.1.exe' title='13 Jul 2009 [2,309KB]' style='font-size: 0.6em;'>Ekaya-0.1.1.exe</a></li>
+<li><a href='Keyboards/Ekaya-0.1.0.exe' title='02 Jul 2009 [1,646KB]' style='font-size: 0.6em;'>Ekaya-0.1.0.exe</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin-2.2.5-1.fc10.src.rpm' title='04 Jun 2009 [10KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin-2.2.5-1.fc10.src.rpm</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin-2.2.5-1.fc10.noarch.rpm' title='04 Jun 2009 [10KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin-2.2.5-1.fc10.noarch.rpm</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin_2.2.5-2_all.deb' title='03 Jun 2009 [10KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin_2.2.5-2_all.deb</a></li>
+<li><a href='Keyboards/kmfl-keyboards-mywin_2.2.5-2.dsc' title='03 Jun 2009 [0KB]' style='font-size: 0.6em;'>kmfl-keyboards-mywin_2.2.5-2.dsc</a></li>
+<li><a href='Keyboards/myWin2.2.kmp' title='13 Apr 2009 [21KB]' style='font-size: 0.6em;'>myWin2.2.kmp</a></li>
+<li><a href='Keyboards/myWin2.2.exe' title='13 Apr 2009 [2,079KB]' style='font-size: 0.6em;'>myWin2.2.exe</a></li>
+<li><a href='Keyboards/myWin.bmp' title='13 Apr 2009 [0KB]' style='font-size: 0.6em;'>myWin.bmp</a></li>
+<li><a href='Keyboards/myKeyboards20050228.zip' title='07 Feb 2009 [293KB]' style='font-size: 0.6em;'>myKeyboards20050228.zip</a> <span class='md5'>(<a href='Keyboards/myKeyboards20050228.zip.md5sum.txt'>MD5Sum</a>)</span></li>
+</ul>
+<h3 id="moz">Mozilla Firefox/Thunderbird Translations into Myanmar</h3>
+<p>Click on the XPI link in Firefox or download and browse to the file from the Install button in the Extensions dialog in Thunderbird. After installing the extension restart the application and open the Extension dialog (on Tools menu). Click on the Extension and click Options to switch between English / Myanmar. 
+The Firefox 1.0.1 language pack requires Padauk Uni4, the others require Padauk or PadaukOT 2.1. 
+<!--
+They will work best with the Graphite enabled versions of Firefox and Thunderbird from <a href="http://sila.mozdev.org/grFirefox.html">sila.mozdev.org</a>. 
+-->
+</p>
+<p>
+If you have corrections please use the <a href="../MyanmarUnicode/Applications/MozillaTranslation.php">feedback form</a>.</p>
+<ul><li><a href='Mozilla/thunderbird-1.5.0.5.my-MM.langpack.xpi' title='13 Apr 2009 [208KB]' style='font-size: 0.6em;'>thunderbird-1.5.0.5.my-MM.langpack.xpi</a></li>
+<li><a href='Mozilla/firefox-3.0a1.my-MM.langpack.xpi' title='13 Apr 2009 [166KB]' style='font-size: 0.6em;'>firefox-3.0a1.my-MM.langpack.xpi</a></li>
+</ul>
+<h3 id="OOoGr">Graphite OpenOffice</h3>
+<p>Myanmar and Graphite enabled OpenOffice is now available from the <a href="http://my.openoffice.org/">Myanmar OpenOffice.org localisation site</a>. </p>
+<p><i>my-MMDict.oxt</i> is an OpenOffice.org Burmese dictionary extension which can check for some spelling errors. However, it also needs OpenOffice to be patched with a Myanmar word breaker.</p>
+<p><!--Graphite OpenOffice - including a Myanmar language locale. Choose the installer (exe) with the highest version number. -->You only need the .diff patch files if you want to compile OpenOffice for yourself. The diff files are subject to the <a href="http://www.openoffice.org/licenses/lgpl_license.html">GNU Lesser General Public License</a> unless otherwise stated.</p>
+<ul><li><a href='OpenOffice/openoffice.org-graphite_0.2.3-1_amd64.deb' title='09 Aug 2010 [554KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.2.3-1_amd64.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.2.3-1_i386.deb' title='09 Aug 2010 [540KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.2.3-1_i386.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.2.3.tar.gz' title='09 Aug 2010 [62KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.2.3.tar.gz</a></li>
+<li><a href='OpenOffice/thanlwinsoft-ooo-myanmar_0.1.0.30_windows_x86.oxt' title='09 Aug 2010 [158KB]' style='font-size: 0.6em;'>thanlwinsoft-ooo-myanmar_0.1.0.30_windows_x86.oxt</a></li>
+<li><a href='OpenOffice/graphiteooo_0.2.3.59_windows_x86.oxt' title='09 Aug 2010 [584KB]' style='font-size: 0.6em;'>graphiteooo_0.2.3.59_windows_x86.oxt</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.2.1-1_i386.deb' title='31 Jul 2010 [538KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.2.1-1_i386.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.2.1-1_amd64.deb' title='31 Jul 2010 [552KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.2.1-1_amd64.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.1.1-1_amd64.deb' title='21 May 2010 [513KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.1.1-1_amd64.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.1.1-1_i386.deb' title='21 May 2010 [499KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.1.1-1_i386.deb</a></li>
+<li><a href='OpenOffice/openoffice.org-graphite_0.1.1.tar.gz' title='21 May 2010 [53KB]' style='font-size: 0.6em;'>openoffice.org-graphite_0.1.1.tar.gz</a></li>
+<li><a href='OpenOffice/OOoGrTests.zip' title='09 Jul 2009 [3,845KB]' style='font-size: 0.6em;'>OOoGrTests.zip</a></li>
+<li><a href='OpenOffice/OOoGrTestsOld.zip' title='08 Jul 2009 [3,833KB]' style='font-size: 0.6em;'>OOoGrTestsOld.zip</a></li>
+</ul>
+<h3 id="teckit">TECkit Converters &amp; DocCharConvert</h3>
+<p>You can either download the converters on their own or as part of DocCharConvert. DocCharConvert requires <a href="http://java.sun.com/j2se/1.5.0/download.jsp">Java JRE 5</a> to be installed. Version 1.x are actually Eclipse plugins using SWT. The prerequisite eclipse plugins are included in the installer for windows. If you already have Eclipse installed, you can copy org.thanlwinsoft.doccharconvert_1.0.x.jar into the plugins subdirectory and restart Eclipse. The plugin has been tested on both Windows and Linux. It requires the TECkit JNI library to be available. The DocCharConvert plugin is covered by the <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPL 2.1</a>.</p>
+<ul><li><a href='Converters/DocCharConvert-linux.gtk.x86.tar.bz2' title='30 Dec 2010 [49,115KB]' style='font-size: 0.6em;'>DocCharConvert-linux.gtk.x86.tar.bz2</a></li>
+<li><a href='Converters/doccharconvert-1.4.504.tar.bz2' title='30 Dec 2010 [15,048KB]' style='font-size: 0.6em;'>doccharconvert-1.4.504.tar.bz2</a></li>
+<li><a href='Converters/doccharconvert-1.4.498.tar.bz2' title='20 Dec 2010 [15,050KB]' style='font-size: 0.6em;'>doccharconvert-1.4.498.tar.bz2</a></li>
+<li><a href='Converters/DocCharConvert-1.3.0.exe' title='09 Jun 2009 [53,082KB]' style='font-size: 0.6em;'>DocCharConvert-1.3.0.exe</a></li>
+<li><a href='Converters/DocCharConvert-1.2.1.exe' title='19 Apr 2009 [52,618KB]' style='font-size: 0.6em;'>DocCharConvert-1.2.1.exe</a></li>
+<li><a href='Converters/DocCharConvertInstaller20060618.jar' title='07 Feb 2009 [925KB]' style='font-size: 0.6em;'>DocCharConvertInstaller20060618.jar</a> <span class='md5'>(<a href='Converters/DocCharConvertInstaller20060618.jar.md5sum.txt'>MD5Sum</a>)</span></li>
+</ul>
+<h3 id="collate">Linux Collation</h3>
+<p>Linux Collation Algorithm for use with ICU and Glibc. Glibc 2.11 now includes the Myanmar locale. The versions here are older and do not include the latest changes. </p>
+<ul><li><a href='Collation/locale-my-0.0.20090525.tar.gz' title='03 Jun 2009 [347KB]' style='font-size: 0.6em;'>locale-my-0.0.20090525.tar.gz</a></li>
+<li><a href='Collation/locale-my_0.0.20090525_all.deb' title='03 Jun 2009 [301KB]' style='font-size: 0.6em;'>locale-my_0.0.20090525_all.deb</a></li>
+<li><a href='Collation/locale-my_0.0.20090525.dsc' title='03 Jun 2009 [0KB]' style='font-size: 0.6em;'>locale-my_0.0.20090525.dsc</a></li>
+<li><a href='Collation/glibc-localedef-my_MM.patch' title='07 Feb 2009 [0KB]' style='font-size: 0.6em;'>glibc-localedef-my_MM.patch</a></li>
+</ul>
+<p>Debian packages for Ubuntu karmic. You can download these directly, or you can add <br /><tt>deb http://www.thanlwinsoft.org/ThanLwinSoft/Downloads/ubuntu karmic main</tt><br /> to your <tt>/etc/apt/sources.list</tt> file.</p>
+<ul><li><a href='ubuntu/dists/karmic/main/binary-amd64/Release' title='17 Nov 2009 [0KB]' style='font-size: 0.6em;'>Release</a></li>
+</ul>
+
+<h3 id="myWeb">Examples for developing a Myanmar Unicode Website</h3>
+<p>You need to be familiar with Javascript and CSS to use these examples.</p>
+<ul><li><a href='WebDevelopment/myWebDevelopment-20090413.zip' title='13 Apr 2009 [411KB]' style='font-size: 0.6em;'>myWebDevelopment-20090413.zip</a></li>
+<li><a href='WebDevelopment/MyanmarWebDev.zip' title='07 Feb 2009 [42KB]' style='font-size: 0.6em;'>MyanmarWebDev.zip</a> <span class='md5'>(<a href='WebDevelopment/MyanmarWebDev.zip.md5sum.txt'>MD5Sum</a>)</span></li>
+</ul>
+<h3 id="java">Graphite JNI</h3>
+<p>A Graphite JNI for Java. The source code for this is available from <a href="http://scripts.sil.org/svn-public/graphite/graphite/trunk/">SVN on scripts.sil.org</a>. The zip contains native libraries for win32, linux amd64 and i386.</p>
+<ul><li><a href='Java/graphitejni-svn420.zip' title='13 Apr 2009 [3,529KB]' style='font-size: 0.6em;'>graphitejni-svn420.zip</a></li>
+</ul>
+</div>
+<p class='right'><a href='../About/'>About&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

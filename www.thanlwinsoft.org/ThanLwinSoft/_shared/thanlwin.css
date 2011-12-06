@@ -1,0 +1,311 @@
+
+@font-face {
+  font-family: "Padauk";
+  src: local("Padauk"), url("Padauk.ttf");
+}
+@font-face {
+  font-family: "Padauk";
+  font-weight: bold;
+  src: local("Padauk"), url("Padauk-Bold.ttf");
+}
+
+body {
+	background: #fffff0;
+}
+/* setting margin on the real body causes problems for keyboardMover in ie*/
+div.body {
+  margin-left: 210px;
+  margin-top: 10px;
+  margin-right: 100px;
+  /*color: #00ff50;
+  background: #c07000;*/
+  color: #000000;
+  background: #fffff0;
+  counter-reset: note;
+  font-size: 12pt;
+}
+
+div.contentsBar {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  width: 180px;
+  margin: 0px;
+  padding: 0px;
+  border-color: #c07000;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: dotted;
+  border-right-style: dotted;
+  background: #ffffd0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+
+div.footer {
+  border-top-color: #c07000;
+  border-top-width: 0.1em;
+  border-top-style: solid;
+  font-size: 0.75em;
+  padding-top: .2em;
+}
+
+ul ul ul.contents {
+  list-style: disc;
+  color: #c07000;
+  /*background: #800010;*/
+  margin-right: 0px;
+  padding: 0px;
+  padding-left: 1em;
+}
+
+ul ul.contents {
+  list-style: square;
+  color: #c07000;
+  /*background: #800020;*/
+  margin-right: 0px;
+  padding: 0px;
+  padding-left: 1em;
+}
+
+div.contentsBar li {
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+  font-size: 11pt;
+}
+
+li {
+  margin-left: 0px;
+  margin-right: 0px;
+  border-width: 0px;
+  border-style: none;
+}
+
+li.currentDoc span, li.currentDir a {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+li.currentDoc {
+  /*border-right: 3px;
+  border-right-style: dotted;
+  border-right-color: #c07000;*/
+  background: #ffffb0;
+  font-style: italic;
+}
+li.currentDir {
+  /*border-right: 3px;
+  border-right-style: dotted;
+  border-right-color: #c07000;*/
+  background:#ffffb0;
+}
+ul.contents {
+  list-style: none;
+  list-style-position: outside;
+  padding: 0px;
+  padding-left: 1em;
+  background: #ffffd0;
+  text-indent: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+h1, h1 span, h1 span.my {
+  font-size: 16pt;
+  padding-top: 0px;
+}
+h2 {
+  font-size: 14pt;
+}
+h2.my {
+  font-size: 14pt;
+  font-weight: bold;
+}
+h3 {
+  font-size: 13pt;
+}
+h4 {
+  font-size: 12pt;
+}
+h5 {
+  font-size: 12pt;
+}
+
+h1,h2,h3,h4,h5 {
+  /*color: navy;
+  background: silver; 
+  padding: 0.2em;*/ 
+  border-top-width: 0.1em;
+  border-bottom-width: 0.1em;
+  border-top-style: none;
+  border-bottom-style: solid;
+  color:  #c07000;
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+a:link {
+    color: #e07000;
+}
+a:visited {
+    color: #a07000;
+}
+
+/*a.note:after {
+  content: "*hi" . counter(note);
+  counter-increment: note;
+}*/
+
+a.note {
+  vertical-align: super;
+  font-size: 0.8em;
+  color: #00ff00;
+}
+
+.centre {
+  text-align: center;
+}
+
+p.right {
+  text-align: right;
+}
+
+.my {
+  font-size: 1em;
+  font-family: Padauk, Myanmar3, Myanmar2;
+}
+
+.fleft {
+  float: left;
+  padding: 0px;
+}
+
+.myUniTest {
+        font-family: Padauk, Myanmar3, Myanmar2;
+        font-size: 1em; /* don't make it so small that rounding errors give problems */
+        color: #c07000; /* should be same as background to make it invisible */
+    }
+.myWarning {
+    color: #ff0000;
+    border-color: #ff0000;
+    border-style: dotted;
+    border-width: 2px;
+}
+.myText {
+    font-family: Padauk, Myanmar3, ThanLwin, Parabaik;
+    font-size: 1em;
+}
+.myTextMsg {
+    text-align: center;
+}
+.myGood {
+}
+
+.myThanLwin {
+    display: block;
+    text-align: right;
+    font-size: small;
+}
+
+img {
+    padding: 0px;
+}
+
+img.screenshot {
+	padding: 1em;
+	display: block;
+}
+
+span.md5 {
+	font-size: 0.67em;
+}
+
+
+pre {
+    background: #ffffd0;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #c07000;
+    padding: 0.3em;
+	overflow: auto;
+}
+
+.keyboardTopBar {
+    background: #c07000;
+}
+
+td.keyButton {
+    background: #ffffb0;
+}
+
+div.keyboard, td.keyboard {
+    background: #ffffd0;
+}
+
+table.consonants, table.vowels, td.keyButton, td.keyboard {
+}
+div.keyboard p.keyboardTab { background-color: #ffffb0; }
+div.keyboard span.tabOn { background-color: #ffffb0; color: #e07000; }
+div.keyboard a.tabOff { background-color: #c07000; }
+
+.playControl { 
+    -moz-border-radius: 5px; -webkit-border-radius: 5px;  
+    border-style: solid; border-width: 2px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: rgb(200,200,200);
+}
+
+.playControl li {
+  margin-left: 1em;
+}
+
+#glyphProperties { padding: 10px; font-size: small; }
+
+.tab { display: inline-block; border-left-style: dotted; border-right-style: dotted; border-top-style: solid; 
+    border-color: #c07000; border-width: 2px;
+    background-color: #ffffd0; padding: 2px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+}
+
+@media print {
+	h1,h2,h3,h4 {
+		page-break-before: auto;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+}
+
+.enTranslation {
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 1%;
+}
+
+h2.myTranslation, h3.myTranslation { font-weight: bold; }
+
+.myTranslation {
+	width: 48%;
+	display: inline-block;
+	font-family: ThanLwin, Padauk, Myanmar3, Parabaik;
+	vertical-align: top;	
+	margin-left: 1%;
+}
+
+.button {
+    cursor:pointer;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+

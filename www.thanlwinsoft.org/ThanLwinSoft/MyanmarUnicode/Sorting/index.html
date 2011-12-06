@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Myanmar Sorting (Collation)</title>
+<meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../../_shared/thanlwin.css"/>
+<link href="../../_icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../../_shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../../_shared/myWebDevelopment/myKeyboard.js"></script>
+<meta content="Myanmar Unicode, collation, sorting" lang="en" name="keywords"/></head>
+<body onload="thanlwinLoaded();myK.pathStem = '../../_shared/';myUnicode.initParse('../../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<div class="contentsBar" id="contentsBar">
+<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a></li>
+<li class="currentDir"><a href="../../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a><br />
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/Sorting/myTestICU.php" title="Test Myanmar sorting with ICU">Myanmar ICU</a></li>
+</ul></li><li class="contentsDir"><a href="../../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
+<li class="contentsDir"><a href="../../MyanmarUnicode/WebDevelopers/" title="Detecting Myanmar Support">Web Developers</a></li>
+</ul></li><li class="contentsDir"><a href="../../DocCharConvert/" title="Document Character Converter">DocCharConvert</a></li>
+<li class="contentsDir"><a href="../../LanguageBuddy/" title="Language Learning Software">LanguageBuddy</a></li>
+<li class="contentsDir"><a href="../../Ekaya/" title="Ekaya Input Method (keyboard)">Ekaya</a></li>
+<li class="contentsDir"><a href="../../../GraphiteOOoExt/" title="Graphite OpenOffice.org extension">Graphite OOo</a></li>
+<li class="contentsDir"><a href="../../../myoooext/" title="Myanmar OpenOffice.org extension">Myanmar OOo</a></li>
+<li class="contentsDir"><a href="../../Downloads/" title="Download Myanmar Unicode Software &amp; Tools">Downloads</a></li>
+<li class="contentsDir"><a href="../../About/" title="About ThanLwinSoft">About</a></li>
+</ul></div>
+<div class='body'>
+<h1>A Guide to Using Myanmar Unicode</h1>
+<h2>Myanmar Sorting (Collation)</h2>
+<div>
+<p>Sorting in Myanmar is quite complicated. The algorithm developed here splits a Myanmar syllable into 5 parts:</p>
+<ul>
+<li>consonant</li>
+<li>medial</li>
+<li>vowel</li>
+<li>final</li>
+<li>tone</li>
+</ul>
+</p>
+<p>
+The algorithm is complicated because each part can be composed of several characters and the final has a higher sorting precedence than the vowel. For more information please see this paper on <a href="MyanmarCollation20080424.pdf">Myanmar Collation</a>.
+</p>
+<p>In Glibc there does not appear to be an easy way to rearrange the order of collation elements. As a result the algorithm implemented here has combined the vowel and final components into one (very large) set of collation elements to get the desired sort order. A perl script <tt>genMyCollate.pl</tt> is used to generate this.
+</p>
+<p>The collation algorithm and the <a href="http://www.myanmars.net/unicode/">Myanmar NLP</a> Lab my-MM locale for linux can be downloaded <a href="../../Downloads/#collate">here</a>.
+</p>
+<p>
+A variant on the alogorithm has also been developed for <a href="http://oss.software.ibm.com/icu/">ICU</a>. It uses a very similar approach to the Glibc algorithm - using a large number of collating elements to achieve the correct order. You can download it <a href="../../Downloads/#collate">here</a>.
+</p>
+<p>
+The Myanmar collation algorithm has been submitted to the <a href="http://unicode.org/cldr/data/common/collation/my.xml">Common Locale Data Repository</a> in <a href="http://www.unicode.org/reports/tr35/">LDML</a> format. Apparently MySQL can use the LDML format for collation - the second of the options on the <a href="http://blogs.mysql.com/peterg/2008/05/19/instructions-for-adding-a-new-unicode-collation/">MySQL blog for adding a new Unicode Collation</a>, though I haven't tried it myself.
+</p>
+<p>
+The discussion of the Myanmar Dictionary Order in &ldquo;Burmese: an introduction to the script&rdquo; by John Okell<a style="note" title="Center for Southeast Asian Studies, Northern Illinois University, DeKalb, 1994">*</a> was very helpful in this work.
+</p>
+<h3>Downloads</h3>
+<ul><li><a href='../../Downloads/Collation/locale-my-0.0.20090525.tar.gz' title='03 Jun 2009 [347KB]' style='font-size: 0.6em;'>locale-my-0.0.20090525.tar.gz</a></li>
+<li><a href='../../Downloads/Collation/locale-my_0.0.20090525_all.deb' title='03 Jun 2009 [301KB]' style='font-size: 0.6em;'>locale-my_0.0.20090525_all.deb</a></li>
+<li><a href='../../Downloads/Collation/locale-my_0.0.20090525.dsc' title='03 Jun 2009 [0KB]' style='font-size: 0.6em;'>locale-my_0.0.20090525.dsc</a></li>
+<li><a href='../../Downloads/Collation/glibc-localedef-my_MM.patch' title='07 Feb 2009 [0KB]' style='font-size: 0.6em;'>glibc-localedef-my_MM.patch</a></li>
+</ul>
+</div>
+<p class='right'><a href='../../MyanmarUnicode/Sorting/myTestICU.php'>Myanmar ICU&gt;&gt;</a></p>
+<div class="footer">
+    <!-- Creative Commons License -->
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
+This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
+<!-- /Creative Commons License -->
+    <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
+myUnicode.imgPrefix = '../../_shared/myWebDevelopment/';
+myUnicode.checkWithMsg();
+--></script></p></div>
+</div></body>
+</html>

@@ -1,0 +1,12 @@
+--- glibc-2.3.5/locale/programs/ld-collate.c.orig	2005-12-21 19:41:12.000000000 +0630
++++ glibc-2.3.5/locale/programs/ld-collate.c	2005-12-21 20:21:30.000000000 +0630
+@@ -2476,8 +2476,8 @@
+       runp = runp->next;
+     }
+   /* Add 40% and find the next prime number.  */
+-  elem_size = MIN (next_prime (elem_size * 1.4), 257);
++  elem_size = MIN (next_prime (elem_size * 1.4), 479);
+
+   /* Allocate the table.  Each entry consists of two words: the hash
+      value and an index in a secondary table which provides the index
+      into the weight table and the string itself (so that a match can

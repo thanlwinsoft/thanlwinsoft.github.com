@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="styles/myanmar-converter-extension.css" type="text/css" />
+  <title>Myanmar Converter Firefox Extension</title>
+  <style type="text/css">
+  *[@lang='my'] { font-family: Padauk, Myanmar3; }
+  body {background: #fffff0; }
+  div#body { margin-left: 100px; }
+  h1,h2,h3,h4,h5 {
+  border-top-width: 0.1em;
+  border-bottom-width: 0.1em;
+  border-top-style: none;
+  border-bottom-style: solid;
+  color:  #c07000;
+}
+h1 { font-size: 16pt; padding-top: 0px; }
+h2 { font-size: 14pt; }
+h3 { font-size: 13pt; }
+h4 { font-size: 12pt; }
+h5 { font-size: 12pt; }
+
+.centre {
+  text-align: center;
+}
+
+p.centre img {
+    padding-bottom: 2em;
+}
+
+.enTranslation {
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 1%;
+}
+
+h2.myTranslation, h3.myTranslation { font-weight: bold; }
+
+.myTranslation {
+	width: 45%;
+	display: inline-block;
+	font-family: ThanLwin, Padauk, Myanmar3, Parabaik;
+	vertical-align: top;	
+	margin-left: 1%;
+}
+
+.warning { color : #d00; }
+
+ul.myTranslation, ul.enTranslation { width: 40%; }
+
+ul#contents { border-bottom-style: solid; border-color: #c07000; width: 90%; }
+li.tab { display: inline-block; border-left-style: dotted;
+    border-right-style: dotted; border-top-style: solid; 
+    border-color: #c07000; border-width: 2px;
+    background-color: #ffffd0; padding: 2px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+}
+
+  </style>
+  <script type="text/javascript">
+  function switchTab(tab)
+  {
+    var contents = document.getElementById('contents');
+    for (var i = 0; i < contents.childNodes.length; i++)
+    {
+        if (contents.childNodes[i].id)
+        {
+            var divId = contents.childNodes[i].id.substring(0, contents.childNodes[i].id.indexOf('Tab'));
+            var div = document.getElementById(divId);
+            if (div) div.style.display = 'none';
+            contents.childNodes[i].style.background = '#ffffd0';
+        }
+    }
+    var activeId = tab.id.substring(0, tab.id.indexOf('Tab'));
+    var activeDiv = document.getElementById(activeId);
+    activeDiv.style.display = 'block';
+    tab.style.background = '#fffff0';
+  }
+  </script>
+   </head>
+<body onload="switchTab(document.getElementById('aboutTab'));">
+<a href="http://thanlwinsoft.co.uk/" title="ThanLwinSoft" style="float:left;"><img src="images/ThanLwin.jpg" alt="ThanLwinSoft" /></a>
+<div id="body">
+<h1 class="enTranslation">Myanmar Converter Firefox Extension</h1>
+<h1 lang="my" class="myTranslation">Firefox ကိုတိုးချဲ့အထူးပြုထားသော မြန်မာစာပြောင်းလဲခြင်း</h1>
+<ul id="contents">
+<li class="tab" onclick="switchTab(this)" id="aboutTab" >Introduction <span lang="my">မိတ်ဆက်</span></li>
+<li class="tab" onclick="switchTab(this)" id="installTab" >Install <span lang="my">ထည့်သွင်းခြင်း</span></li>
+<li class="tab" onclick="switchTab(this)" id="readZawGyiTab" >Read ZawGyi <span lang="my">ဇော်ဂျီဖတ်ခြင်း</span></li>
+<li class="tab" onclick="switchTab(this)" id="sendZawGyiTab" >Send ZawGyi <span lang="my">ဇော်ဂျီပို့ခြင်း</span></li>
+<li class="tab" onclick="switchTab(this)" id="spellCheckTab" >Check spelling <span lang="my">သတ်ပုံစစ်ခြင်း</span></li>
+</ul>
+<div id="about">
+<h2 class="enTranslation">What does it do?</h2>
+<h2 lang="my" class="myTranslation">သူကဘာလုပ်လဲ?</h2>
+<p class="enTranslation">
+This extension automatically detects if a web page is using Zaw Gyi One fonts and converts the text to Unicode.
+This means that you only need to install a Unicode font, you don't need to have ZawGyi installed.
+</p>
+<p lang="my" class="myTranslation">
+web page တစ်ခုသည် စကားလုံးများကို ဇော်ဂျီဖောင့်ဖြင့် အသုံးပြုရေးသားထားလျှင် ဤတိုးချဲ့အထူးပြုချက်မှ ယူနီကုတ်သို့ အလိုအ​​လျောက် ရှာဖွေပြောင်းလဲပေးနိုင်သည်။ ထိုကြောင့် သင်သည် ယူနီကုတ်ဖောင့် တစ်မျိုးတည်းကိုသာ ထည့်သွင်းရန်လိုအပ်ပြီး၊ ဇော်ဂျီဖောင့်ကို ထည့်သွင်းရန် မလိုအပ်ပါဟု ဆိုလိုခြင်းပင်ဖြစ်သည်။
+</p>
+
+<h2 class="enTranslation">Why convert from ZawGyi to Unicode?</h2>
+<h2 lang="my" class="myTranslation">ဘာလို့ ဇော်ဂျီကနေ ယူနီကုတ်ကို ပြောင်းတာလဲ?</h2>
+<p class="enTranslation">
+Having both ZawGyi and Unicode fonts causes problems when the font is not explicitly defined by the web page.
+If the wrong font is selected, then the Myanmar text will display wrongly. 
+Unicode has many advantages over Zaw Gyi:
+</p>
+<p lang="my" class="myTranslation">
+ဇော်ဂျီဖောင့် နှင့် ယူနီကုတ်ဖောင့် နှစ်မျိုးလုံးရှိနေခြင်းသည် web page အနေဖြင့် မည်သည့်ဖောင့်ဆိုသည်ကို ပြတ်သားစွာ မဖော်ပြနိုင်သော ပြဿနာများကို ဖြစ်စေနိုင်ပါသည်။ မှားယွင်းသောဖောင့်ကို​ ရွေးချယ်မိခဲ့မည်ဆိုလျှင်ဖြင့် မြန်မာစာလုံးများ သည်လည်း မှားယွင်းစွာ ဖော်ပြနေပါလိမ့်မည်။ ယူနီကုတ်တွင် ဇော်ဂျီထက်သာလွန်သော အကျိုးကျေးဇူးများရှိပေသည်။
+</p>
+<ul class="enTranslation">
+<li>Unicode has only one spelling for a Myanmar word, Zaw Gyi can have multiple spellings for the same word.</li>
+<li>Alphabetical sorting and searching for words are much easier with Unicode.</li>
+<li>Localized software will use Unicode.</li>
+<li>Myanmar spell checking becomes possible with Unicode.</li>
+<li>Mon, Karen, Shan can be displayed correctly with Unicode.</li>
+</ul>
+<ul lang="my" class="myTranslation">
+<li>မြန်မာစကားလုံး တစ်လုံးအတွက် ယူနီကုတ်တွင် စာလုံးပေါင်းပုံစံ တစ်မျိုးတည်းသာ ရှိပါသည်။ တူညီသော စကားလုံးအတွက်ဇော်ဂျီတွင် စာလုံးပေါင်းပုံစံများ အများအပြား ရှိနိုင်ပါသည်။</li>
+<li>ယူနီကုတ်ဖြင့် အက္ခရာစဉ်အလိုက် စကားလုံး အမျိုးအစားခွဲခြင်း၊ ရှာဖွေခြင်းများကို ပိုမိုလွယ်ကူစွာလုပ်​ဆောင်နိုင်ပါသည်။</li>
+<li>အများနှင့်ဆိုင်သောအဆင့်မှီဆော့ဝဲလ်များသည် ယူနီကုတ်ကိုသာ အသုံးပြုပါလိမ့်မည်။ </li>
+<li>ယူနီကုတ်ဖြင့် မြန်မာစာ စာလုံးပေါင်းသတ်ပုံ စစ်ဆေးခြင်းများ ဖြစ်လာနိုင်ဖွယ်ရှိပါသည်။</li>
+<li>ယူနီကုတ်ဖြင့် မွန်၊ ကရင်၊ ရှမ်း စကားလုံးများကို မှန်ကန်စွာ ပြသနိုင်ပါသည်။</li>
+</ul>
+</div>
+
+<div id="install">
+<h2 class="enTranslation">Requirements</h2>
+<h2 lang="my" class="myTranslation">လိုအပ်ချက်များ</h2>
+<p class="enTranslation">
+A Myanmar Unicode font to be installed such as <a href="http://scripts.sil.org/Padauk">Padauk</a> or Myanmar3.</p>
+<p lang="my" class="myTranslation">
+ဖော်ပြပါ မြန်မာယူနီကုတ်ဖောင့်များ၊ ဥပမာ <a href="http://scripts.sil.org/Padauk">ပိတောက်</a> သို့မဟုက် မြန်မာ-၃ ဖောင့်များ ထည့်သွင်းအသုံးပြု၍ရပါသည်။</p>
+
+<h2 class="enTranslation">Install</h2>
+<h2 lang="my" class="myTranslation">ထည့်သွင်းခြင်း</h2>
+<p class="enTranslation">
+Click  <em>myanmar-converter-0.4.2.xpi</em>. Firefox web browser will ask to install software on your computer. Click <em>Allow</em> and restart firefox.
+</p>
+<p lang="my" class="myTranslation">
+အောက်တွင်ဖော်ပြထားသော <em>myanmar-converter-0.4.2.xpi</em> ကို မောက်စ်ဖြင့် တစ်ချက်ကလစ်လိုက်ပါ။ ထိုအခါ ​ပုံတွင်တွေ့ရသည့်အတိုင်း firefox web browser မှ ဤ software ကိုမိမိ၏ စက်အတွင်းသို့ ထည့်သွင်းခွင့်ပေး မပေး မေးပါလိမ့်မည်။ ထိုအခါ Allow ကိုနှိပ်လိုက်ပါ။ ပြီးနောက်firefox ကို restart ပြန်လုပ်ပေးရပါမည်။
+</p>
+<div class="centre">
+<ul><li><a href='/MyanmarConverter/myanmar-converter-0.4.2.xpi' title='06 Jan 2011 [131KB]' style='font-size: 0.6em;'>myanmar-converter-0.4.2.xpi</a></li>
+<li><a href='/MyanmarConverter/myanmar-converter-0.4.1.xpi' title='04 Jan 2011 [133KB]' style='font-size: 0.6em;'>myanmar-converter-0.4.1.xpi</a></li>
+<li><a href='/MyanmarConverter/myanmar-converter-0.4.0.xpi' title='30 Dec 2010 [140KB]' style='font-size: 0.6em;'>myanmar-converter-0.4.0.xpi</a></li>
+<li><a href='/MyanmarConverter/myanmar-converter-0.3.1.xpi' title='12 Mar 2010 [578KB]' style='font-size: 0.6em;'>myanmar-converter-0.3.1.xpi</a></li>
+<li><a href='/MyanmarConverter/myanmar-converter-0.2.0.xpi' title='22 Apr 2009 [556KB]' style='font-size: 0.6em;'>myanmar-converter-0.2.0.xpi</a></li>
+<li><a href='/MyanmarConverter/myanmar-converter-0.1.0.xpi' title='20 Apr 2009 [772KB]' style='font-size: 0.6em;'>myanmar-converter-0.1.0.xpi</a></li>
+</ul>
+</div>
+<p class="centre">
+<img src="images/install.png" />
+</p>
+</div>
+
+<!--
+<h2 class="enTranslation">Usage</h2>
+<h2 lang="my" class="myTranslation">အသုံးပြုပုံ</h2>
+-->
+
+<div id="readZawGyi">
+<h2 class="enTranslation">Reading ZawGyi Web Pages</h2>
+<h2 lang="my" class="myTranslation">ဇော်ဂျီ Web Page များဖတ်ခြင်း</h2>
+<p class="enTranslation">
+Many Myanmar web pages are using ZawGyi or other fonts which are not following the Unicode Standard correctly. The "Myanmar Converter" Firefox Extension allows people with only genuine Myanmar Unicode fonts installed to read these pages by converting the text to Unicode when the page opens.
+</p>
+<p lang="my" class="myTranslation">
+မြန်မာ web page ​တော်တော်များများသည် ယူနီကုတ်အဆင့်အတန်းကို မှန်ကန်စွာမလိုက်နာသော ဇော်ဂျီ သို့မဟုတ် အခြားဖောင့် များကို အသုံးပြုနေကြပါသည်။ စစ်မှန်သော မြန်မာယူနီကုတ်ဖောင့် တစ်မျိုးတည်းကိုသာ ထည့်သွင်းအသုံးပြုထားသော သူများအနေဖြင့် ထိုစာမျက်နှာများကို ဖတ်ရှုနိုင်ရန် စာမျက်နှာဖွင့်လိုက်သောအခါ Firefox ကို တိုးချဲ့ အထူးပြုထားသော မြန်မာစာပြောင်းလဲခြင်း (The "Myanmar Converter" Firefox Extension) ၏ စာသားများကိုယူနီကုတ်သို့ပြောင်းလဲပေးခြင်း နည်းစနစ်အားဖြင့် ဖတ်ရှုနိုင်ပါသည်။
+</p>
+<p class="enTranslation">
+The Myanmar text will display wrongly like this:
+</p>
+<p lang="my" class="myTranslation">
+မြန်မာစာလုံးများသည် ဤကဲ့သို့ မှားယွင်းစွာဖော်ပြနေပါမည်-
+<p class="centre">
+<img src="images/beforeConversion.png" />
+</p>
+
+<p class="enTranslation">
+Select Tools/Myanmar Converter from the menu.
+</p>
+<p lang="my" class="myTranslation">
+မီနူး ပေါ်မှ Tools ဆိုသည့် ကိရိယာထဲမှ Myanmar Converter ဆိုသည့် အရာကို ရွေးချယ်ပါ။ 
+</p>
+<p class="centre">
+<img src="images/state1.png"/>
+</p>
+
+<p class="enTranslation">
+The Myanmar Converter Options dialog should appear. You can choose to match the Hostname exactly or with a suffix. The Pathname can also be match exactly or with a prefix. Check the Enable conversion for Pattern check box and click the Add button.
+</p>
+<p lang="my" class="myTranslation">
+မြန်မာစာဖောင့်ပြောင်းလဲရာ၌ ရွေးချယ်ပိုင်ခွင့်များ (Myanmar Converter Options) ဆိုသည့် dialog တစ်ခု ပေါ်လာပါမည်၊ ပြီးနောက် သင်သည် အဓိကဆာလ်ဗာအမည် (Hostname) အတွက် အားလုံးကိုတိတိကျကျတွဲပါ (match exactyl) သို့မဟုတ် ​ရှေ့မှစ၍အားလုံးကိုတွဲပါ (match as suffix) ကိုရွေးချယ်ရပြီး လမ်းကြောင်းခွဲအမည် (Partname) အတွက်လည်း အားလုံး ကိုတိတိကျကျတွဲပါ (match exactyl) သို့မဟုတ် အနောက်မှစ၍အားလုံးကိုတွဲပါ (match as prefix) ကို ရွေးချယ်ရပါမည်။ ထို့နောက် ပုံစံအလိုက်ပြောင်းလဲ​နိုင်သောစနစ် (Enable conversion for Pattern) ဆိုသည့် check box လေးကို အမှန်ပေးပြီး Add ဆိုသည့် ခလုပ်ကိုနှိပ်လိုက်ရပါမည်။</p>
+<p  class="centre">
+<img src="images/state2.png" />
+</p>
+
+<p class="enTranslation">Add more entries as required. Click the OK button when finished.</p>
+<p lang="my" class="myTranslation">လိုအပ်သောအခြား အချက်အလက်များကို ပေါင်းထည့်ပါ။ အားလုံးပြည့်စုံပြီးသည့်နောက် OK ကိုနှိပ်ပါ။</p> 
+<p  class="centre">
+<img src="images/state3.png" />
+</p>
+
+<p class="enTranslation">Reload the web page and the Myanmar text should display correctly.</p>
+<p lang="my" class="myTranslation">web page ကို reload ပြန်လုပ်ခိုင်းပြီးလျှင်ဖြင့် မြန်မာစာလုံးများသည် တိကျမှန်ကန်စွာ ထွက်ပေါ်လာပါလိမ့်မည်။</p>
+<p  class="centre">
+<img src="images/afterConversion.png" />
+</p>
+</div>
+
+<div id="sendZawGyi">
+<h2 class="enTranslation">Type in Unicode, send as ZawGyi</h2>
+<h2 lang="my" class="myTranslation">ယူနီကုတ်ဖြင့်ရိုက်၊ ဇော်ဂျီအဖြစ်ပို့</h2>
+<p class="enTranslation">
+It is also possible to send Myanmar text to people using Zawgyi or other fonts from within a web page such as Gmail or Facebook. Select the textarea, right click with the mouse and then choose "Myanmar Unicode Converter/Send form as: Zawgyi-One" or whichever font is appropriate.
+</p>
+<p lang="my" class="myTranslation">
+ဤတိုးချဲ့အထူးပြုချက်သည် Gmail သို့မဟုတ် Facebook ကဲ့သို့သော web page များတွင် ဇော်ဂျီ သို့မဟုတ် အခြား​ဖောင့်များ အသုံးပြုနေသော လူများအတွက် မြန်မာစကားလုံးများ​ ပေးပို့ရန်လည်းပဲ ဖြစ်နိုင်ပါသည်။ စာသားပါရှိသော textarea ကိုမောက်စ်​တင်လိုက်ပါ၊ ထို့နောက် မောက်စ်ညာဘက်ကို ကလစ်လိုက်ပါ၊ ပြီး​လျှင် "Myanmar Unicode Converter" ထဲမှ "Send form as:Zawgyi-One" သို့မဟုတ် သင့်လျော်သောဖောင့်ကို ရွေးချယ်ပြီး ပေးပို့နိုင်ပါသည်။
+</p>
+<p  class="centre">
+<img src="images/gmail.png" />
+</p>
+
+<p class="enTranslation">
+There are two ways to compose an email in Gmail. If you use <em>Plain Text</em>, then right click on the text area and choose "Myanmar Unicode Converter / Send form as: Zawgyi-One" and the text will be converted from Unicode to ZawGyi when you send it. (You need to do this both for the title and the body.) If you use <em>Rich formatting</em>, type the email in Unicode, then choose "Myanmar Unicode Converter / Convert Selection from Unicode - to ZawGyi-One" before you click send.
+</p>
+<p lang="my" class="myTranslation">
+Gmail တွင် Compose mail အတွက် နည်းလမ်းနှစ်မျိုးရှိပါသည်။ သင်သည် <em>Plain Text</em> ပုံစံကိုအသုံးပြုပါက စာသားပါရှိသော textarea ပေါ်တွင် "Myanmar Unicode Converter / Send form as:Zawgyi-One" ကိုရွေးချယ်၍ ယူနီကုတ်မှဇော်ဂျီသို့​ပြောင်းလဲပေးပို့နိုင်ပါသည်(ခေါင်းစဉ် title နှင့်စာကိုယ် body နှစ်ခုလုံးအတွက် ဤကဲ့သို့ပြုလုပ်ရန်လိုအပ်ပါသည်)။ <em>Rich formatting</em> ပုံစံကို သင်အသုံးပြုလျှင် ယူနီကုတ်ဖြင့် စာသားများကိုရေးသားပါ၊ ပြီးနောက် "Myanmar Unicode Converter" ထဲမှ "Convert Selection from Unicode - to ZawGyi-One" ကို ပေးပို့ခြင်း send မလုပ်မီရွေးချယ်ပါ။
+</p>
+<p  class="centre">
+<img src="images/gmail1.png" />
+</p>
+
+<p class="enTranslation">
+<span class="warning">
+Note: Adding Comments to a Facebook page should work fine. Facebook chat handles keyboard events in a way which makes it difficult to convert text from Unicode to ZawGyi before the message is sent. The work around is to manually choose "Convert Selection from Unicode - to ZawGyi-One" from the right-click menu before you type Enter.
+</span>
+</p>
+<p lang="my" class="myTranslation">
+<span lang="my" class="warning">
+မှတ်ချက်- Facebook စာမျက်နှာတစ်ခုတွင် (Comment)ထင်မြင်သုံးသပ်ချက်များ ရေးရန် အဆင်ပြေပါသည်။ သို့သော် Facebook chat လုပ်ဆောင်သော keyboard အကျိုးသက်ရောက်မှုတစ်ခုသည် သတင်းစကားမပို့မီ ယူနီကုတ်မှ ဇော်ဂျီသို့ပြောင်းရန် အခက်အခဲဖြစ်စေသည်။ ထို့ကြောင့်လည်းကောင်းကို သင် Enter မနှိပ်မီ ကိုယ်တိုင်ရွေးချယ်မှုတစ်ခုဖြစ်သော မောက်စ်ညာဘက်ကိုကလစ်၍ "Convert Selection from Unicode - to ZawGyi-One" ကိုလုပ်ဆောင်ပေးရပါမည်။
+</span>
+</p>
+</div>
+
+<div id="spellCheck">
+<h2 class="enTranslation">Myanmar spell-checking</h2>
+<h2 lang="my" class="myTranslation">မြန်မာစာ စာလုံးပေါင်းသတ်ပုံစစ်ဆေးခြင်း</h2>
+<p class="enTranslation">Choose the textarea where you went to spell-check and right click with the mouse. Choose Check Spelling and Languages/ Burmese/Myanmar.</p>
+<p lang="my" class="myTranslation">သင်စစ်ဆေးလိုသော textarea ကိုရွေး​၍ မောက်စ်ညာဘက်ကိုကလစ်လိုက်ပါ၊ Check Spelling ကိုအမှန်ခြစ်ပြီး Languages ထဲမှ Burmese/Myanmar ကို အမှန်ခြစ်ပါ။</p>
+<p  class="centre">
+<img src="images/spellCheck1.png" />
+</p>
+<!--
+<p class="enTranslation">
+Myanmar does not usually have spaces between words, but you can automatically insert
+ZWSP instead. Choose <em>Myanmar Unicode Converter/Separate words as you type (with ZWSP)</em> and spell-checking should become correct.
+</p>
+<p lang="my" class="myTranslation">မြန်မာစကားတွင် အများအားဖြင့် စကားလုံးတစ်လုံးနှင့်တစ်လုံးကြားတွင် နေရာလွတ်ချန်ခြင်းမရှိပေ။ သို့သော် သင်သည် သုညအကျယ်အစားထိုးခြင်းကို အလိုအလျောက် ဖြည့်ဆွက်နိုင်ပါသည်။ ထို့ကြောင့် <em>Myanmar Unicode Converter ထဲမှ Separate words as you type (with ZWSP)</em> ကို ထပ်မံရွေးချယ်ပေးရပါမည်။ ထိုမှသာ စာလုံးပေါင်းသတ်ပုံကို မှန်ကန်စွာ ခွဲခြား စစ်ဆေးပေးနိုင်မည် ဖြစ်သည်။
+</p>
+<p  class="centre">
+<img src="images/spellCheck2.png" style="vertical-align: top;"/>
+<img src="images/spellCheck2.1.png" style="vertical-align: top;"/>
+</p>
+-->
+<p class="enTranslation">
+In the example below, "ဖြားနာသည်", the word "ဖြား" should be spelled "ဖျား", so a red line is shown underneath to show the error. If you right click with the mouse, a list of possible correct words is shown, so you can correct the spelling.
+</p>
+<p lang="my" class="myTranslation">
+အောက်ဖော်ပြပါ ဥပမာ "ဖြားနာသည်" တွင် "ဖျား" ကို "ဖြား" ဟု မှားယွင်း ရေးသားထားပါသည်။ ထို့ကြောင့် မှားယွင်းသောစာလုံးပေါင်း "​ဖြား" ကို မျဉ်းအနီသား၍ အမှားပြထားပါမည်။
+ထိုစကားလုံးပေါ်တွင် မောက်စ်၏ညာဘက်ကိုကလစ်လိုက်ပါက ဖြစ်နိုင်ချေရှိသောစကားလုံးအစီအစဉ်တစ်ခု ဖော်ပြပေးပါမည်။ ထို့ကြောင့်သင်သည် စာလုံးပေါင်းကို မှန်ကန်စွာ ပြင်ဆင်ပေးနိုင်ပါသည်။
+</p>
+<p class="centre" >
+<img src="images/spellCheck3.png" style="vertical-align: top;"/>
+<img src="images/spellCheck4.png" style="vertical-align: top;"/>
+<img src="images/spellCheck5.png" style="vertical-align: top;"/>
+</p>
+
+<p class="enTranslation">
+This extension does not understand the meaning of Myanmar words, so it can only check if the spelling of a word may be correct. It cannot tell whether that spelling is actually correct in that particular sentence. In the example below, "ဖျားရောင်း" was typed, but "​ဖြားယောင်း" is actually correct. However, both "ဖျား" and "ရောင်း" are correct spellings of words, so the extension does not realize they are wrong in this situation. The same problem occurs with spell-checking in other languages like English as well, so this is not an excuse to avoid checking it yourself.
+</p>
+<p lang="my" class="myTranslation">
+ဤတိုးချဲ့အထူးပြုချက်သည် မြန်မာစကားလုံးများ၏ အနက်အဓိပ္ပာယ်ကို နားမလည်နိုင်ပါ။ ထို့ကြောင့် တိုးချဲ့အထူးပြုချက်သည် စကားလုံးတစ်လုံး၏ စာလုံးပေါင်း မှန်ကန်မှု ရှိ၊ မရှိကိုသာလျှင် စစ်ဆေးနိုင်ပါသည်။ သူသည် သက်ဆိုင်ရာဝါကျအလိုက် မည်သို့စာလုံးပေါင်းရမည်ကို မှန်ကန်စွာ ​မပြောနိုင်ပေ။ အောက်ပါဥပမာတွင် သွေးဆောင်ဖြားယောင်းသည်ဟု အဓိပ္ပာယ်ရသော "​ဖြားယောင်း" ကို "ဖျားရောင်း" ဟုမှားယွင်းရေးသားထားသည်။ သို့သော် "ဖျား" နှင့် "ရောင်း" သည် မှန်ကန်သော စာလုံးပေါင်းရှိသည့် စကားလုံးများဖြစ်ပေသည်။ ထို့ကြောင့် ဤသို့သော အခြေအနေမျိုးတွင် တိုးချဲ့အထူးပြုချက်သည် ထိုစကားလုံးများကို မှာယွင်းသည်ဟု သိနိုင်မည်မဟုတ်ပေ။ စာလုံးပေါင်းသတ်ပုံစစ်ဆေးခြင်းနှင့် ပတ်သတ်၍ English စသည့် အခြားဘာသာစကားများတွင်လည်း တူညီသောပြဿနာများ ဖြစ်ပွားနေပါသည်။ ထို​ကြောင့် စာလုံးပေါင်းသတ်ပုံစစ်ဆေးခြင်း ပြီးပြည့်စုံရန် သင်ကိုယ်တိုင်စစ်ဆေးခြင်းသည် ပို၍ကောင်းသောနည်းလမ်းတစ်ခု ဖြစ်သည်ကို သတိပြုရန် လိုအပ်ပေသည်။
+</p>
+<p  class="centre">
+<img src="images/spellCheck6.png" />
+</p>
+</div>
+
+</div>
+</body>
+</html>
