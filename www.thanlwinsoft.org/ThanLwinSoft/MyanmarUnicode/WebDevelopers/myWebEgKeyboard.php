@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: Myanmar Unicode Keyboard</title>
 <meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
-<link type="text/css" rel="stylesheet" href="../../_shared/myWebDevelopment/myKeyboard.css"/>
-<link type="text/css" rel="stylesheet" href="../../_shared/thanlwin.css"/>
-<link href="../../_icons/shortcut.png" rel="SHORTCUT ICON"/>
-<script  type="text/javascript" src="../../_shared/thanlwin.js">//padding to keep end tag</script>
-<script type="text/javascript" src="../../_shared/myWebDevelopment/common/tlsCommon.js"></script>
-<script type="text/javascript" src="../../_shared/myWebDevelopment/myDetection.js"></script>
-<script type="text/javascript" src="../../_shared/myWebDevelopment/myKeyboard.js"></script>
+<link type="text/css" rel="stylesheet" href="../../shared/myWebDevelopment/myKeyboard.css"/>
+<link type="text/css" rel="stylesheet" href="../../shared/thanlwin.css"/>
+<link href="../../icons/shortcut.png" rel="SHORTCUT ICON"/>
+<script  type="text/javascript" src="../../shared/thanlwin.js">//padding to keep end tag</script>
+<script type="text/javascript" src="../../shared/myWebDevelopment/common/tlsCommon.js"></script>
+<script type="text/javascript" src="../../shared/myWebDevelopment/myDetection.js"></script>
+<script type="text/javascript" src="../../shared/myWebDevelopment/myKeyboard.js"></script>
 <meta content="Myanmar Unicode Online Keyboard" lang="en" name="keywords"/></head>
-<body onload="thanlwinLoaded();myK.pathStem = '../../_shared/';myUnicode.initParse('../../_shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
+<body onload="thanlwinLoaded();myK.pathStem = '../../shared/';myUnicode.initParse('../../shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
 <div class="contentsBar" id="contentsBar">
-<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../_icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
+<ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
 <li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
 <ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
 <li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
@@ -36,8 +36,8 @@
 <h1>A Guide to Using Myanmar Unicode</h1>
 <h2>Myanmar Unicode Keyboard</h2>
 <div>
-<p><span class="myText">မြန်မာစကားရိုက်ချင်ရင် ညာဘက်ရှိ <img src="../../_shared/myWebDevelopment/myKeyboardOff.png"/> ပုံပေါ်မှာ နှိပ်။ အင်္ဂလိပ်စကား ပြန်ရိုက်ရန် နောက်တစ်ခါနှိပ်။</span><br />
-Click on the <img src="../../_shared/myWebDevelopment/myKeyboardOff.png"/> icon on the right to type in Myanmar. Click again to type in English.
+<p><span class="myText">မြန်မာစကားရိုက်ချင်ရင် ညာဘက်ရှိ <img src="../../shared/myWebDevelopment/myKeyboardOff.png"/> ပုံပေါ်မှာ နှိပ်။ အင်္ဂလိပ်စကား ပြန်ရိုက်ရန် နောက်တစ်ခါနှိပ်။</span><br />
+Click on the <img src="../../shared/myWebDevelopment/myKeyboardOff.png"/> icon on the right to type in Myanmar. Click again to type in English.
 
 </p>
 <form>
@@ -53,8 +53,8 @@ document.addEventListener("load", function()
 }, true);
 </script>
 <!--
-<iframe style="width:650px; height:500px;" src="../../_shared/myWebDevelopment/examples/myKeyboard.html">
-Example <a href="../../_shared/myWebDevelopment/examples/myKeyboard.html">Myanmar Unicode 5.1 Online Keyboard</a>
+<iframe style="width:650px; height:500px;" src="../../shared/myWebDevelopment/examples/myKeyboard.html">
+Example <a href="../../shared/myWebDevelopment/examples/myKeyboard.html">Myanmar Unicode 5.1 Online Keyboard</a>
 </iframe>
 -->
 </div>
@@ -65,7 +65,7 @@ Example <a href="../../_shared/myWebDevelopment/examples/myKeyboard.html">Myanma
 This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 License</a> except where another license is explicitly stated.
 <!-- /Creative Commons License -->
     <p>For more information <script type='text/javascript'>showMT('contact ThanLwinSoft.org','info','thanlwinsoft','org')</script><span class="my">သံ‌လွင်</span><br /><script type='text/javascript'><!--
-myUnicode.imgPrefix = '../../_shared/myWebDevelopment/';
+myUnicode.imgPrefix = '../../shared/myWebDevelopment/';
 myUnicode.checkWithMsg();
 --></script></p></div>
 </div></body>
