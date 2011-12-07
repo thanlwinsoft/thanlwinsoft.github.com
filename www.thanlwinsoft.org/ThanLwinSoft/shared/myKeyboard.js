@@ -43,7 +43,7 @@ consMode : 0,
 numLevels : 14,
 lang : 'my',
 keyboardIcon : "Keyboard.png",
-keyboardSrc : "Keyboard.php",
+keyboardSrc : "Keyboard.html",
 lastTokenLength : 1, // used by myK.getCharOrder()
 afterKey : 0,
 currentSyllable : new Array("", "", "", "", "", "", "", "",
@@ -805,7 +805,7 @@ registerKeyboard: function(lang)
     appendKeyboard: function(docText)
     {
         var div = document.createElement('div');
-        var fixedLinks = docText.replace(/<\?php.*\?>ThanLwinIcon.png/g,myK.pathStem + "ThanLwinIcon.png");
+        var fixedLinks = docText.replace(/<\.html.*\?>ThanLwinIcon.png/g,myK.pathStem + "ThanLwinIcon.png");
         if (div)
         {
             document.getElementsByTagName('body')[0].appendChild(div);

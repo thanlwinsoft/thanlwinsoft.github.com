@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: OpenOffice</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html><head><title>A Guide to Using Myanmar Unicode: GTK/Pango</title>
 <meta content="text/html; charset=UTF-8;" http-equiv="Content-Type"/>
 <link type="text/css" rel="stylesheet" href="../../shared/myWebDevelopment/myKeyboard.css"/>
 <link type="text/css" rel="stylesheet" href="../../shared/thanlwin.css"/>
@@ -7,21 +7,21 @@
 <script type="text/javascript" src="../../shared/myWebDevelopment/common/tlsCommon.js"></script>
 <script type="text/javascript" src="../../shared/myWebDevelopment/myDetection.js"></script>
 <script type="text/javascript" src="../../shared/myWebDevelopment/myKeyboard.js"></script>
-<meta content="Myanmar Unicode OpenOffice" lang="en" name="keywords"/></head>
+<meta content="Myanmar Unicode GTK Gnome Pango" lang="en" name="keywords"/></head>
 <body onload="thanlwinLoaded();myK.pathStem = '../../shared/';myUnicode.initParse('../../shared/myWebDevelopment/');myK.registerKeyboard(['my']);">
 <div class="contentsBar" id="contentsBar">
 <ul class="contents"><li><h1><a href="../../../"><img class="fleft" src="../../icons/ThanLwin.jpg" alt="ThanLwinSoft Logo"/></a><span class="my">သံ‌လွင်</span> Soft</h1></li><li class="contentsDoc"><a href="../../" title="ThanLwinSoft">Home</a></li>
 <li class="currentDir"><a href="../../MyanmarUnicode/" title="Unicode for the Myanmar/Burmese Script"> Myanmar Unicode</a><br />
-<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.php" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
-<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.php" title="Introduction">Intro</a></li>
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/gettingStarted.html" title="Getting Started with Myanmar Unicode">Getting Started</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Intro.html" title="Introduction">Intro</a></li>
 <li class="contentsDir"><a href="../../MyanmarUnicode/Fonts/" title="Myanmar Unicode Fonts">Fonts</a></li>
 <li class="contentsDir"><a href="../../MyanmarUnicode/InputMethods/" title="InputMethods / Keyboards - how to type Myanmar Unicode">Input Methods</a></li>
 <li class="currentDir"><a href="../../MyanmarUnicode/Applications/" title="Myanmar Unicode aware Applications">Applications</a><br />
-<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/Mozilla.php" title="Mozilla Firefox (Web Browser) and Thunderbird (Email)">Web/Email</a></li>
-<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/MozillaTranslation.php" title="Myanmar translation of Firefox and Thunderbird">မီးမြေခွေး</a></li>
-<li class="currentDoc"><span>OpenOffice</span></li>
-<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/MyOpenOffice.php" title="using OpenOffice with Myanmar language">Using OOo</a></li>
-<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/Pango.php" title="Gnome and GTK Applications on Linux with Pango Support">Pango/GTK</a></li>
+<ul class="contents"><li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/Mozilla.html" title="Mozilla Firefox (Web Browser) and Thunderbird (Email)">Web/Email</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/MozillaTranslation.html" title="Myanmar translation of Firefox and Thunderbird">မီးမြေခွေး</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/OpenOffice.html" title="OpenOffice Word Processor, Spreadsheet etc.">OpenOffice</a></li>
+<li class="contentsDoc"><a href="../../MyanmarUnicode/Applications/MyOpenOffice.html" title="using OpenOffice with Myanmar language">Using OOo</a></li>
+<li class="currentDoc"><span>Pango/GTK</span></li>
 </ul></li><li class="contentsDir"><a href="../../MyanmarUnicode/Sorting/" title="Sorting/Collating Myanmar in Dictionary Order">Sorting Myanmar</a></li>
 <li class="contentsDir"><a href="../../MyanmarUnicode/Parsing/" title="Line Breaking &amp; Tokenizing Myanmar">Parsing</a></li>
 <li class="contentsDir"><a href="../../MyanmarUnicode/Conversion/" title="Converting from old font encodings to Unicode">Converters</a></li>
@@ -36,15 +36,15 @@
 </ul></div>
 <div class='body'>
 <h1>A Guide to Using Myanmar Unicode</h1>
-<h2>OpenOffice</h2>
+<h2>GTK/Pango</h2>
 <div>
 <p>
-You can download a version of the Open Source Office Suite OpenOffice 3 with Myanmar support from the links at <a href="http://my.openoffice.org/">my.openoffice.org</a>. This now includes support for Myanmar word based line breaking. If you install the <a href="../../Downloads/#OOoGr">Myanmar dictionary</a> then it also has some spell checking support. As of OpenOffice 3.1 the main version of OpenOffice includes a Myanmar locale with Myanmar sorting support.</p>
-<p>If you would like to help with translating (localizing) OpenOffice into Myanmar, then please have a look at the <a href="http://pootle.sunvirtuallab.com/my/">Pootle site</a>.</p>
-<p>On Windows you can type using Keyman. On Linux, you must configure SCIM to use XIM “On the spot” mode (in the Front End / X Window Setup options) for KMFL to work correctly with OpenOffice. 
-</p>
+Almost all GTK and Gnome applications on Linux use Pango and the Harfbuzz library for rendering. Therefore, if you get Myanmar Unicode support into Pango then you can render Myanmar correctly in a lot of Linux applications and the Gnome Desktop. The default Pango module should work with Padauk 2.6 and Myanmar3. A Pango Myanmar OpenType module is also being developed.</p>
+<p>There is also a Graphite Pango module which is available as source code from <a href="http://scripts.sil.org/svn-public/graphite/graphite/">Subversion</a>. Prebuilt debs are available for Ubuntu from <a href="http://packages.sil.org/">packages.sil.org</a>.
+</p> 
+<p>It should also be possible to use KDE with Myanmar Unicode since it also uses the Harfbuzz library for OpenType rendering. Unfortunately, the current KDE code doesn't work properly with existing Myanmar Unicode 5.1 fonts.</p>
 </div>
-<p class='right'><a href='../../MyanmarUnicode/Applications/MyOpenOffice.php'>Using OOo&gt;&gt;</a></p>
+<p class='right'><a href='../../MyanmarUnicode/Sorting/'>Sorting Myanmar&gt;&gt;</a></p>
 <div class="footer">
     <!-- Creative Commons License -->
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/" style="float:right; vertical-align: top;"><img alt="Creative Commons License" src="http://creativecommons.org/images/public/somerights20.gif" style="border: none;"/></a>
